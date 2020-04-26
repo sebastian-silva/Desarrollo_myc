@@ -1,6 +1,13 @@
 <footer class="footer">
     <div class="container">
-        <div class="row">
+        
+        <div class="row" style="display: flex; align-items: center; justify-content: center; height: 80px;">
+            <a href="#">
+                <img  src="assets/img/LogoMiel2.png" style="margin-top: 20px;" alt="" width="140" height="57" srcset="assets/img/LogoMiel2.png 2x"/>
+            </a>
+        </div>
+
+        <div class="row" style="display: flex; align-items: center; justify-content: center;">
             <nav class="footer-nav">
                 <ul>
                     <li><a href="https://www.creative-tim.com">Creative Tim</a></li>
@@ -8,11 +15,12 @@
                     <li><a href="https://www.creative-tim.com/license">Licenses</a></li>
                 </ul>
             </nav>
-            <div class="credits ml-auto">
-                <span class="copyright">
-                    © {{test | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Creative Tim
-                </span>
-            </div>
+        </div>
+
+        <div class="credits ml-auto" style="display: flex; align-items: center; justify-content: center;">
+            <span class="copyright">
+                © {{test | date: 'yyyy'}}. Miel&Canela Todos los derechos reservados. Design by U.S Dev
+            </span>
         </div>
     </div>
 </footer>

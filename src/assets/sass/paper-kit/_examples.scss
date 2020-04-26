@@ -181,8 +181,8 @@
 }
 
 .presentation-title{
-    font-size: 8em;
-    font-weight: 700;
+    font-size: 4em;
+    font-weight: 900;
     margin: 0;
     color: #FFFFFF;
     // background: #fbf8ec;
@@ -196,8 +196,9 @@
     -webkit-text-fill-color: transparent;
 }
 .presentation-subtitle{
-    font-size: 1.7em;
+    font-size: 1.4em;
     color: #FFFFFF;
+    max-width: 800px;
 }
 
 .category-absolute{
