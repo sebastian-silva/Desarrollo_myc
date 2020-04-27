@@ -11,13 +11,21 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 import { ComponentsModule } from './components/components.module';
 import { ExamplesModule } from './examples/examples.module';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { SomosComponent } from './pages/inicio/somos/somos.component';
+import { OfertasComponent } from './pages/inicio/ofertas/ofertas.component';
+import { MenuComponent } from './pages/inicio/menu/menu.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    InicioComponent,
+    SomosComponent,
+    OfertasComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
