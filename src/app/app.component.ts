@@ -5,6 +5,9 @@ import 'rxjs/add/operator/filter';
 import { DOCUMENT } from '@angular/common';
 import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { SomosComponent } from './pages/inicio/somos/somos.component';
+import { ComponentsComponent } from './components/components.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
     selector: 'app-root',
@@ -31,11 +34,9 @@ export class AppComponent implements OnInit {
             if (number > 150 || window.pageYOffset > 150) {
                 // add logic
                 navbar.classList.remove('navbar-transparent');
-                // navbar.classList.add('navbar-default');
             } else {
                 // remove logic
                 navbar.classList.add('navbar-transparent');
-                // navbar.classList.remove('navbar-default');
             }
         });
         var ua = window.navigator.userAgent;
