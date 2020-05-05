@@ -98,7 +98,7 @@
 }
 
 .navigation-example {
-    background-image: url('../img/ilya-yakover.jpg');
+    background-image: url('../img/Todos.jpg');
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
@@ -1244,4 +1244,11 @@ pre.prettyprint {
     display: flex; 
     align-items: center;
     justify-content: center;
+}
+
+.margvid{
+    margin-left: -400px;
+    margin-right: -400px;
+    border-color: #05ae0e;
+    border-style: solid;
 }

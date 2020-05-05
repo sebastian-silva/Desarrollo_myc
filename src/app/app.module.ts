@@ -15,6 +15,9 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { SomosComponent } from './pages/inicio/somos/somos.component';
 import { OfertasComponent } from './pages/inicio/ofertas/ofertas.component';
 import { MenuComponent } from './pages/inicio/menu/menu.component';
+import { LoginComponent } from './pages/login/login.component';
+import { VideosComponent } from './pages/inicio/videos/videos.component';
+import { CarruselComponent } from './pages/inicio/carrusel/carrusel.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { MenuComponent } from './pages/inicio/menu/menu.component';
     InicioComponent,
     SomosComponent,
     OfertasComponent,
-    MenuComponent
+    MenuComponent,
+    LoginComponent,
+    VideosComponent,
+    CarruselComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,7 @@ import { MenuComponent } from './pages/inicio/menu/menu.component';
     RouterModule,
     ComponentsModule,
     ExamplesModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
