@@ -1,4 +1,4 @@
-/*!
+c/*!
 
  =========================================================
  * Paper Kit 2 Angular - v1.3.0
@@ -1241,7 +1241,7 @@ pre.prettyprint {
 }
 
 .centrar{
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: center;
 }
