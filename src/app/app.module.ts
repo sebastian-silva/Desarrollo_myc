@@ -9,15 +9,12 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
-import { ComponentsModule } from './components/components.module';
-import { ExamplesModule } from './examples/examples.module';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { SomosComponent } from './pages/inicio/somos/somos.component';
 import { OfertasComponent } from './pages/inicio/ofertas/ofertas.component';
 import { MenuComponent } from './pages/inicio/menu/menu.component';
 import { LoginComponent } from './pages/login/login.component';
-import { VideosComponent } from './pages/inicio/videos/videos.component';
-import { CarruselComponent } from './pages/inicio/carrusel/carrusel.component';
+import { EntradaComponent } from './pages/inicio/entrada/entrada.component';
 
 
 @NgModule({
@@ -30,16 +27,13 @@ import { CarruselComponent } from './pages/inicio/carrusel/carrusel.component';
     OfertasComponent,
     MenuComponent,
     LoginComponent,
-    VideosComponent,
-    CarruselComponent
+    EntradaComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     FormsModule,
     RouterModule,
-    ComponentsModule,
-    ExamplesModule,
     AppRoutingModule
   ],
   providers: [],
