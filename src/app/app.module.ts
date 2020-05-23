@@ -15,6 +15,8 @@ import { OfertasComponent } from './pages/inicio/ofertas/ofertas.component';
 import { MenuComponent } from './pages/inicio/menu/menu.component';
 import { LoginComponent } from './pages/login/login.component';
 import { EntradaComponent } from './pages/inicio/entrada/entrada.component';
+import { TiendaComponent } from './pages/tienda/tienda.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { EntradaComponent } from './pages/inicio/entrada/entrada.component';
     OfertasComponent,
     MenuComponent,
     LoginComponent,
-    EntradaComponent
+    EntradaComponent,
+    TiendaComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
