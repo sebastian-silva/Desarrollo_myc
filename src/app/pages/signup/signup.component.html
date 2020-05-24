@@ -1,0 +1,62 @@
+<div class="wrapper">
+    <div class="page-header" style="background-image: url('./assets/img/login-image.jpg');">
+        <div class="filter"></div>
+            <div class="container centrar">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-12 col-sm-12 mr-lg-4 ml-lg-4">
+                      <div class="card card-register" style="background-color: rgb(240, 240, 240); color: #00824a;">
+                          <h3 class="title" style="color: #00824a;">Crear usuario</h3>
+                            <form [formGroup]="formularioRegistro" class="register-form" style="border-color: black;">
+
+                              <div class="input-group form-group-no-border">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                      <i class="nc-icon nc-badge"></i>
+                                  </span>
+                                </div>
+                                  <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre" >
+                              </div>
+
+                              <br>
+                              <div class="input-group form-group-no-border">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                      <i class="nc-icon nc-email-85"></i>
+                                  </span>
+                                </div>
+                                  <input type="text" class="form-control" placeholder="Correo" formControlName="correo" > 
+                              </div>
+
+                              <br>
+                              <div class="input-group form-group-no-border" >
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                      <i class="nc-icon nc-key-25"></i>
+                                  </span>
+                                </div>
+                                  <input type="password" class="form-control" placeholder="Contraseña" formControlName="clave" >
+                              </div>
+
+                              <br>
+                              <br>
+                              <label>Ingresa tu fecha de nacimiento</label>
+                              <div class="input-group form-group-no-border" >
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                      <i class="nc-icon nc-watch-time"></i>
+                                  </span>
+                                </div>                           
+                                  <input type="date" text="01/01/2020" class="form-control" placeholder="Fecha" formControlName="fechaNacimiento" >
+                              </div>
+
+                              <button class="btn btn-danger btn-block btn-round" (click)="registro()"  [disabled]="!formularioRegistro.valid" style="background-color: #00824a; border-color: #00824a;">Registrarse</button>
+                            </form>
+                          <div class="forgot">
+                            <a routerLink="/login" class="btn btn-link btn-danger" style="color: #00824a;">Volver</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>

@@ -5,11 +5,12 @@
     opacity: 1;
     text-shadow: none;
     font-size: 12px;
+    visibility: hidden;
 
     &:hover,
     &:focus{
         opacity: 1;
-        background-color: $danger-states-color;
+        background-color: #6c4523;
     }
 }
 .carousel-control-prev-icon{
@@ -76,29 +77,30 @@
 .carousel-inner{
     .carousel-item{
         img{
-            border-radius: $border-radius-extreme;
+            //border-radius: $border-radius-extreme;
             box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
-            height: 400px;
-            width: 100%;
+            height: 100vh;
+            width: 100vw;
         }
     }
 }
 
 .carousel-indicators{
     bottom: 0px;
+    
 }
 .carousel-indicators li{
     background-color: $white-color;
-    border: 0 none;
+    border: 10 solid;
 }
 .carousel-indicators .active{
-    background-color: $danger-color;
+    background-color: #6c4523;
 }
 .page-carousel:hover{
     .carousel-control-prev,
     .carousel-control-next{
         opacity: 1;
-        @include transition(300ms, linear);
+        @include transition(3000ms, linear);
 
     }
 }
