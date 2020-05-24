@@ -17,6 +17,8 @@ import { LoginComponent } from './pages/login/login.component';
 import { EntradaComponent } from './pages/inicio/entrada/entrada.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { ComponentsComponent } from './pages/components/components.component';
+import { AsdcComponent } from './pages/asdc/asdc.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { SignupComponent } from './pages/signup/signup.component';
     LoginComponent,
     EntradaComponent,
     TiendaComponent,
-    SignupComponent
+    SignupComponent,
+    ComponentsComponent,
+    AsdcComponent
   ],
   imports: [
     BrowserModule,
