@@ -6,6 +6,7 @@ import {Usuario} from '../Modelo/Usuario';
 })
 export class UsuarioService {
   usuarioActivo: Usuario= new Usuario();
+  
   constructor() { 
     this.usuarioActivo.idUsuario=0;
     this.usuarioActivo.nombre="";

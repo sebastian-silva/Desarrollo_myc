@@ -10,7 +10,6 @@ import { UsuarioService } from '../../servicios/usuario.service';
 export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
-    usuarioA: Usuario= new Usuario();
 
     constructor(public location: Location, private element : ElementRef,public usuarioSer:UsuarioService) {
         this.sidebarVisible = false;
@@ -19,10 +18,6 @@ export class NavbarComponent implements OnInit {
     ngOnInit():void {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
-        this.usuarioA = this.usuarioSer.usuarioActivo;
-        this.usuarioA.nombre
-        console.log(this.usuarioA.nombre)
-        console.log("Hola")
     }
 
     sidebarOpen() {
@@ -78,5 +73,10 @@ export class NavbarComponent implements OnInit {
             return false;
         }
     }
+
+    cerrarSesion(){
+        this.usuarioSer.usuarioActivo.idUsuario=0;
+        this.usuarioSer.usuarioActivo.nombre="";
+      }
     
 }

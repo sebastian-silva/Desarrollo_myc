@@ -34,9 +34,9 @@ export class LoginComponent implements OnInit {
       this.usuarioTempo.idUsuario=0;
       this.ingresoSer.comprobarUsuario(this.usuarioTempo).subscribe((usuarioR)=>{
         if(usuarioR.puntos==1){
-          this.mensaje="Ese correo no existe, puedes crear tu cuenta gratis"
+          this.mensaje="No encontramos tu correo, puedes crear tu cuenta gratis 😄 "  
         }else if(usuarioR.puntos==2){
-          this.mensaje="Contraseña incorrecta"
+          this.mensaje="La contraseña que ingresaste no es correcta "
         }else{
           this.ingresoSer.ObtenerUsuarios().subscribe((usuarios)=>{
             for(let i in usuarios){

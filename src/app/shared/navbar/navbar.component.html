@@ -16,7 +16,7 @@
             
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" *ngIf="!isDocumentation()">
-                    <a class="nav-link" rel="tooltip" title="Pagina principal" data-placement="bottom" href="#">Hola {{usuarioA.nombre}}
+                    <a class="nav-link" rel="tooltip" title="Pagina principal" data-placement="bottom" href="#">Hola
                     </a>
                 </li>
 
@@ -45,7 +45,8 @@
                     </a>
                 </li>
                 <li class="nav-item" >
-                    <a routerLink="/login" class="btn btn-neutral">Iniciar sesión</a>
+                    <a routerLink="/login" *ngIf="usuarioSer.usuarioActivo.idUsuario==0" class="btn btn-neutral">Iniciar sesión</a>
+                    <a routerLink="/login" (click)="cerrarSesion()" *ngIf="usuarioSer.usuarioActivo.idUsuario!=0"class="btn btn-neutral">Cerrar sesion</a>
                 </li>
 
             </ul>

@@ -52,7 +52,8 @@
                               <button class="btn btn-danger btn-block btn-round" (click)="registro()"  [disabled]="!formularioRegistro.valid" style="background-color: #00824a; border-color: #00824a;">Registrarse</button>
                             </form>
                           <div class="forgot">
-                            <a routerLink="/login" class="btn btn-link btn-danger" style="color: #00824a;">Volver</a>
+                            <p *ngIf="!datosCorrectos" >Ese correo ya lo tenemos registrado</p>
+                            <a routerLink="/login" class="btn btn-link btn-danger" style="color: #00824a;">Volver</a>                      
                         </div>
                       </div>
                     </div>
