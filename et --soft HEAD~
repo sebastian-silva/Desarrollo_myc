@@ -1,0 +1,376 @@
+[33mcommit b777828a2065872de922e1cf9f05e117b9265f65[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Sebastian Silva <casesime2.1@gmail.com>
+Date:   Thu May 21 10:25:58 2020 -0500
+
+    sin cosas que no sirven
+
+[33mcommit d43d4546fbe738bcb9131f554ab0b9bf5474faff[m
+Author: Sebastian Silva <casesime2.1@gmail.com>
+Date:   Mon May 11 22:42:07 2020 -0500
+
+    otra produccion
+
+[33mcommit d1c90b1326e6076d4bef010e9438134fa436a72a[m
+Author: Sebastian Silva <casesime2.1@gmail.com>
+Date:   Mon May 11 22:31:56 2020 -0500
+
+    con imagen inicio
+
+[33mcommit 2b64271ff447c5e60f6fdec1a5bb9b08a7929ca1[m
+Merge: ee98d3b 1d84b93
+Author: David Hidalgo <davidhiga@unisabana.edu.co>
+Date:   Mon May 11 09:25:21 2020 -0500
+
+    Merge branch 'master' of https://github.com/sebassil/Desarrollo_myc
+
+[33mcommit ee98d3b87dc0f4928fcda026915b944791bba3d8[m
+Author: David Hidalgo <davidhiga@unisabana.edu.co>
+Date:   Mon May 11 09:23:34 2020 -0500
+
+    Nuevo Inicio
+
+[33mcommit 1d84b932c583a2b5281a31b44036aa5b40ee12f1[m
+Author: Imbachi <57844238+Imbachi@users.noreply.github.com>
+Date:   Sat May 9 16:49:36 2020 -0500
+
+    Update login.component.html
+
+[33mcommit 20a30943455befa72b60ca53c143f6f7569593d6[m
+Author: Imbachi <57844238+Imbachi@users.noreply.github.com>
+Date:   Sat May 9 16:45:41 2020 -0500
+
+    Update login.component.html
+
+[33mcommit d82124a18564db35b2d57b27d84abf2e7e217929[m
+Author: Sebastian Silva <casesime2.1@gmail.com>
+Date:   Tue May 5 00:44:05 2020 -0500
+
+    primera version de prueba ahora si
+
+[33mcommit 69dcccbeb0885e1e4bcb09bee6b54bfba872a8da[m
+Author: Sebastian Silva <casesime2.1@gmail.com>
+Date:   Tue May 5 00:24:07 2020 -0500
+
+    primera version de prueba
+
+[33mcommit fd4d0e1be93201f2d085dafac8c17125729631eb[m[33m ([m[1;31morigin/Pull[m[33m)[m
+Author: Sebastian Silva <casesime2.1@gmail.com>
+Date:   Mon Apr 27 22:57:18 2020 -0500
+
+    version 1.1
+
+[33mcommit 0898f49a815e2e920624ed8a517d69f1751af07b[m
+Author: Sebastian Silva <casesime2.1@gmail.com>
+Date:   Mon Apr 27 00:17:51 2020 -0500
+
+    Version 1.0
+
+[33mcommit 0b3907041d7fd8e6096f3b965952672448ddd45a[m
+Author: Sebastian Silva <casesime2.1@gmail.com>
+Date:   Sun Apr 26 14:08:08 2020 -0500
+
+    Header y footer bien
+
+[33mcommit ba03f71b3693ce746ccb348366b4f8415ff2f8de[m[33m ([m[1;31morigin/feature/1.3.0[m[33m)[m
+Author: rarestoma <tomairares@gmail.com>
+Date:   Tue Mar 17 11:24:08 2020 +0200
+
+    Feat(v1.3.0): Update version
+
+[33mcommit e53a405e69b60fa3246d696b2fa19ae7eb7390a1[m
+Author: rarestoma <tomairares@gmail.com>
+Date:   Tue Mar 17 11:15:24 2020 +0200
+
+    Feat(v1.3.0): Update version and fix errors
+
+[33mcommit 6f008ba869801129527b5aae8b8b892ce178978a[m
+Merge: 1ea8d68 0494647
+Author: chelaruc <chelaruciprian10@gmail.com>
+Date:   Thu Jul 11 14:40:04 2019 +0300
+
+    Merge branch 'master' of https://github.com/creativetimofficial/paper-kit-2-angular
+    
+    * 'master' of https://github.com/creativetimofficial/paper-kit-2-angular:
+      Update ISSUE_TEMPLATE.md
+
+[33mcommit 1ea8d68cc284d06677f87d964f73af54b12b2b6f[m
+Author: chelaruc <chelaruciprian10@gmail.com>
+Date:   Thu Jul 11 14:38:43 2019 +0300
+
+    added copyright
+
+[33mcommit 049464722b8876290ad65e5bb85c69639440855f[m
+Author: Chelaru Ciprian <chelaruciprian10@gmail.com>
+Date:   Thu Jun 27 10:28:11 2019 +0300
+
+    Update ISSUE_TEMPLATE.md
+
+[33mcommit 1f7550717a9746dc15eb1f37f8d5b4d46bd12927[m
+Author: chelaruc <chelaruciprian10@gmail.com>
+Date:   Tue Jun 4 15:19:20 2019 +0300
+
+    changed structure
+
+[33mcommit 591d8ab8acc7d3fda0e8e615ca934e6b72924bf4[m
+Author: chelaruc <chelaruciprian10@gmail.com>
+Date:   Tue Jun 4 12:46:59 2019 +0300
+
+    added hash
+
+[33mcommit f77bc738f1ca13475f4bba9b10efd6466398c111[m
+Author: chelaruc <chelaruciprian10@gmail.com>
+Date:   Wed Jan 9 18:07:52 2019 +0200
+
+    added v1.2.0
+
+[33mcommit 59d8ce2ffee15d7217659e51fe09c92e6c74a48e[m
+Author: chelaruc <chelaruciprian10@gmail.com>
+Date:   Wed Jan 9 16:59:55 2019 +0200
+
+    fixed design errors
+
+[33mcommit ff1385d43ffc9e1a05b029a2db1e8719cea8cbe9[m
+Author: chelaruc <chelaruciprian10@gmail.com>
+Date:   Wed Jan 9 15:38:45 2019 +0200
+
+    changed bootstrap version
+
+[33mcommit c2892a1a4b60719299931909c0f4ff9db3509879[m
+Author: chelaruc <chelaruciprian10@gmail.com>
+Date:   Wed Jan 9 15:35:00 2019 +0200
+
+    fixed responsive menu
+
+[33mcommit 8b77ed8e68be32c952cf4fc8e9934d1508d06f11[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Tue Aug 21 16:26:09 2018 +0300
+
+    finshed readme
+
+[33mcommit 0b178d4bad9e88ffbbe8c7cc01ae05a5b20b2e7e[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Tue Aug 21 12:10:58 2018 +0300
+
+    fixes
+
+[33mcommit 702dde7a85669799dc9bf1e78213a14fa6b516ce[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Tue Aug 21 10:40:50 2018 +0300
+
+    update to angular 6 + bootstrap 4.1.0 + ng-bootstrap 2.0.0
+
+[33mcommit 48ee67f46eb4394fde72c289a40aa64b867b43e1[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Wed May 23 15:32:07 2018 +0300
+
+    small changes
+
+[33mcommit 7f81d5caadb3c4dfbacab7b6800cef72ec0ebdad[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Mon Nov 13 10:56:39 2017 +0200
+
+    removed scripts
+
+[33mcommit 2a4b91073404e50a683a009c743375f611bd2ae2[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Fri Oct 6 17:55:00 2017 +0300
+
+    small changes
+
+[33mcommit 6eee4e8cb9842a640c1ca7132d0feb74d53e396f[m
+Merge: e4fafbf 1d8b33a
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Fri Oct 6 17:54:52 2017 +0300
+
+    Merge branch 'master' of https://github.com/creativetimofficial/pk2-angular
+    
+    * 'master' of https://github.com/creativetimofficial/pk2-angular:
+      small changes for first page
+    
+    # Conflicts:
+    #       src/app/home/home.component.html
+    #       src/assets/sass/paper-kit/_examples.scss
+
+[33mcommit e4fafbf841d853317eb13749f4d6717529bed9d9[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Fri Oct 6 17:48:32 2017 +0300
+
+    small changes
+
+[33mcommit 1d8b33a285af68d23632c231ac6e060bc4601720[m
+Author: AlexP <axelut@me.com>
+Date:   Fri Oct 6 17:47:44 2017 +0300
+
+    small changes for first page
+
+[33mcommit 0d5d4a08e589095d5200c6b456a8d0fde1fdce6a[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Fri Oct 6 17:23:44 2017 +0300
+
+    small changes for responsive
+
+[33mcommit 4410c708302df9934490d4daf8f5af97febf5a6f[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Fri Oct 6 13:00:37 2017 +0300
+
+    small changes
+
+[33mcommit ffbaab1f0700483b451c36f350e45afb3f981a21[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Fri Oct 6 12:09:17 2017 +0300
+
+    final fixes
+
+[33mcommit a3b32890c79f2236166d250f5ad168be8d182030[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Wed Oct 4 16:23:18 2017 +0300
+
+    small changes
+
+[33mcommit eb05322de3a173160bacad182ed41490337c2d8e[m
+Merge: 6b30920 05ddddd
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Wed Oct 4 15:42:49 2017 +0300
+
+    Merge branch 'master' of https://github.com/creativetimofficial/pk2-angular
+    
+    * 'master' of https://github.com/creativetimofficial/pk2-angular:
+      ignore package-lock
+
+[33mcommit 6b309209a44bab246f5f00f0b37b93c6fa54dc5b[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Wed Oct 4 15:42:39 2017 +0300
+
+    added changelog + finished readme + added static page documentation + small changes
+
+[33mcommit 05ddddd3c745299ebaa98d71ebda293914347e7d[m
+Author: AlexP <axelut@me.com>
+Date:   Wed Oct 4 12:51:25 2017 +0300
+
+    ignore package-lock
+
+[33mcommit d179499d150ddeb723ab4b9ab483ff1c27503073[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Wed Oct 4 12:38:53 2017 +0300
+
+    fixed errors
+
+[33mcommit 17391eb8e49ea573e8d21663547154fdc769ae2a[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Wed Oct 4 12:36:23 2017 +0300
+
+    small changes
+
+[33mcommit ccc5ef120466bc9ea923d6c15200dd0377850799[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Wed Oct 4 12:16:06 2017 +0300
+
+    small changes
+
+[33mcommit 14b4a420aefb27763258040e90619bb961c94359[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Tue Oct 3 16:35:46 2017 +0300
+
+    resposive sidebar
+
+[33mcommit b05bf4e8d54eaf06da93ab25f56889fe2446f230[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Tue Oct 3 13:55:18 2017 +0300
+
+    npm install
+
+[33mcommit b28565af62af64159f4b5ce21531b8c4a6ee301e[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Tue Oct 3 13:52:43 2017 +0300
+
+    indented code and removed extra files
+
+[33mcommit 5753d57ae6ab7609a395e4f95e2fa8aa2e700324[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Tue Oct 3 12:59:19 2017 +0300
+
+    small changes in navbar
+
+[33mcommit 923cccfb903b90d21056db6f40b2548595f71d78[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Tue Oct 3 11:23:04 2017 +0300
+
+    small changes
+
+[33mcommit 5f6d6c8822c2962aecf3f113eb6ab139b4f8ebc2[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Mon Oct 2 18:48:31 2017 +0300
+
+    fixed datepicker + carousel
+
+[33mcommit 47cf34b710c3da5637aa230217f78efed2707f04[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Mon Oct 2 16:43:52 2017 +0300
+
+    fixed on scroll navbar
+
+[33mcommit 9b6ef77cc977d232cbd0d988d41f3e2055c56a24[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Mon Oct 2 16:18:00 2017 +0300
+
+    fixed verions
+
+[33mcommit 8fcf125daa202c8e3cdad95e403d187f5ecbcb91[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Mon Oct 2 16:14:23 2017 +0300
+
+    changed versions
+
+[33mcommit b9548e77a773b7eadb6fd414395194ff0366a03a[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Mon Oct 2 15:52:56 2017 +0300
+
+    small changes for checkboxes and radios
+
+[33mcommit 71cc126723d09a290fe13667923b22ea015f068b[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Fri Sep 29 12:24:18 2017 +0300
+
+    added dropdowns + fixed nav-tabs + replaced offsets with mr-auto and ml-auto
+
+[33mcommit 4990f0cc4ea14f39486c3356ac3c275023eb6e8a[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Thu Sep 28 17:36:57 2017 +0300
+
+    fixed popovers
+
+[33mcommit 57f7d0de72a3edb71b74eba7471a04be3eebd497[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Thu Sep 28 11:26:14 2017 +0300
+
+    fixed nucleo icons
+
+[33mcommit f806a71857a143b1468482139fd055a7c64be92f[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Wed Sep 27 13:28:57 2017 +0300
+
+    some fixes
+
+[33mcommit 684cc831ed6b67f28f787b1f4eeabe2dbc4133f6[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Tue Sep 26 12:22:22 2017 +0300
+
+    changes in navbar
+
+[33mcommit afc53c0b38de031010fb14ce0ff5747735b8088a[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Fri Sep 22 13:27:18 2017 +0300
+
+    added angular-cli.json
+
+[33mcommit a2111c43d93ddeaab98e1cb5267931a286f467d7[m
+Author: chelaruc <chelaru_ciprian@yahoo.com>
+Date:   Fri Sep 22 13:21:42 2017 +0300
+
+    added files
+
+[33mcommit 588d921164d5deb9b773560cd7c4dd96fdb6c3fd[m
+Author: Chelaru Ciprian <chelaruciprian10@gmail.com>
+Date:   Fri Sep 22 13:06:12 2017 +0300
+
+    Initial commit
