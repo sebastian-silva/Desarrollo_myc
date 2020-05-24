@@ -19,6 +19,7 @@ import { TiendaComponent } from './pages/tienda/tienda.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { ComponentsComponent } from './pages/components/components.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
     TiendaComponent,
     SignupComponent,
     NosotrosComponent,
-    ContactoComponent
+    ContactoComponent,
+    ComponentsComponent
   ],
   imports: [
     BrowserModule,
