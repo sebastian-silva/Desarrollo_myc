@@ -16,6 +16,8 @@ import { EntradaComponent } from './pages/inicio/entrada/entrada.component';
 import{HttpClientModule}from '@angular/common/http';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { NosotrosComponent } from './pages/nosotros/nosotros.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
 import { ComponentsComponent } from './pages/components/components.component';
 
 
@@ -32,6 +34,8 @@ import { ComponentsComponent } from './pages/components/components.component';
     EntradaComponent,
     TiendaComponent,
     SignupComponent,
+    NosotrosComponent,
+    ContactoComponent,
     ComponentsComponent
   ],
   imports: [
