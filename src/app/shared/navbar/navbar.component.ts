@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
-
+import{Usuario} from '../../Modelo/Usuario';
+import { UsuarioService } from '../../servicios/usuario.service';
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
@@ -9,15 +10,21 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
+    usuarioA: Usuario= new Usuario();
 
-    constructor(public location: Location, private element : ElementRef) {
+    constructor(public location: Location, private element : ElementRef,public usuarioSer:UsuarioService) {
         this.sidebarVisible = false;
     }
 
-    ngOnInit() {
+    ngOnInit():void {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
+        this.usuarioA = this.usuarioSer.usuarioActivo;
+        this.usuarioA.nombre
+        console.log(this.usuarioA.nombre)
+        console.log("Hola")
     }
+
     sidebarOpen() {
         const toggleButton = this.toggleButton;
         const html = document.getElementsByTagName('html')[0];
@@ -71,4 +78,5 @@ export class NavbarComponent implements OnInit {
             return false;
         }
     }
+    
 }
