@@ -10,6 +10,9 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { AdminComponent } from './pages/admin/admin.component';
+import { DisenosComponent } from './pages/admin/disenos/disenos.component';
+import { PedidosComponent } from './pages/admin/pedidos/pedidos.component';
+import { ProductosComponent } from './pages/admin/productos/productos.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -19,7 +22,10 @@ const routes: Routes =[
     { path: 'signup', component: SignupComponent },
     { path: 'nosotros', component: NosotrosComponent },
     { path: 'contacto', component: ContactoComponent },
-    { path: 'admin', component: AdminComponent }
+    { path: 'admin', component: AdminComponent },
+    { path: 'disenos', component: DisenosComponent},
+    { path: 'pedidos', component: PedidosComponent},
+    { path: 'productos', component: ProductosComponent}
 ];
 
 @NgModule({
