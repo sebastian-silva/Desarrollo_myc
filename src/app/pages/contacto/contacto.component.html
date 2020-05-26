@@ -5,25 +5,29 @@
                 <div class="col-md-10 col-md-offset-3 col-sm-20 col-xs-12">
                     <div class="panel panel-danger">
                         <div class="panel-body">
-                            <form id="reused_form">
+
+                            <form [formGroup]="formularioCorreo" id="reused_form" style="margin-top: 80px">
                                 <div class="form-group">
                                     <label><i class="fa fa-user" aria-hidden="true"></i> Nombre</label>
-                                    <input type="text" name="name" class="form-control" placeholder="Ingrese su nombre">
+                                    <input type="text" name="name" class="form-control" formControlName="nombre" placeholder="Ingrese su nombre">
+                                </div>
+                                <div class="form-group">
+                                    <label><i class="fa fa-user" aria-hidden="true"></i> Asunto</label>
+                                    <input type="text" name="name" class="form-control" formControlName="asunto" placeholder="Ingrese su nombre">
                                 </div>
                                 <div class="form-group">
                                     <label><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
-                                    <input type="email" name="email" class="form-control" placeholder="Ingrese su Email">
+                                    <input type="email" name="email" class="form-control" formControlName="correo" placeholder="Ingrese su Email">
                                 </div>
                                 <div class="form-group">
                                     <label><i class="fa fa-comment" aria-hidden="true"></i> Mensaje Final</label>
-                                    <textarea rows="3" name="message" class="form-control" placeholder="Escriba su mensaje"></textarea>
+                                    <textarea rows="3" name="message" class="form-control" formControlName="cuerpo" placeholder="Escriba su mensaje"></textarea>
                                 </div>
-    
-    
                                 <div class="form-group">
-                                    <button class="btn btn-raised btn-block btn-danger">Enviar</button>
+                                    <button (click)="enviarCorreo()" [disabled]="!formularioCorreo.valid" class="btn btn-raised btn-block btn-danger">Enviar</button>
                                 </div>
                             </form>
+                            <p>{{mensaje}}</p>
                             <div id="error_message" style="width:100%; height:100%; display:none; ">
                             <h4>Error</h4>
                             Sorry there was an error sending your form.
