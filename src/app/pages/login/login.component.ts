@@ -34,21 +34,25 @@ export class LoginComponent implements OnInit {
       this.usuarioTempo.idUsuario=0;
       this.ingresoSer.comprobarUsuario(this.usuarioTempo).subscribe((usuarioR)=>{
         if(usuarioR.puntos==1){
-          this.mensaje="No encontramos tu correo, puedes crear tu cuenta gratis 😄 "  
+          this.mensaje="No encontramos tu correo, puedes crear tu cuenta gratis 😄";  
         }else if(usuarioR.puntos==2){
-          this.mensaje="La contraseña que ingresaste no es correcta "
+          this.mensaje="La contraseña que ingresaste no es correcta";
         }else{
           this.ingresoSer.ObtenerUsuarios().subscribe((usuarios)=>{
             for(let i in usuarios){
               if(usuarios[i].correo==this.usuarioTempo.correo){
                 this.usuarioSer.usuarioActivo=usuarios[i];
-                this.ruta.navigateByUrl("home")           
+                if(this.usuarioSer.usuarioActivo.idUsuario==1){
+                  this.ruta.navigateByUrl("admin");
+                }else{
+                  this.ruta.navigateByUrl("home");
+                }
+                 console.log(this.usuarioSer.usuarioActivo.idUsuario);
               }
             }
           })
         }
       });
-      
     }
   }
 
