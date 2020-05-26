@@ -19,6 +19,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { ComponentsComponent } from './pages/components/components.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ComponentsComponent } from './pages/components/components.component';
     SignupComponent,
     NosotrosComponent,
     ContactoComponent,
-    ComponentsComponent
+    ComponentsComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

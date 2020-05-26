@@ -15,7 +15,7 @@
             
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item" *ngIf="!isDocumentation()">
-                    <a class="nav-link" rel="tooltip" title="Pagina principal" data-placement="bottom" href="#">Inicio
+                    <a class="nav-link" rel="tooltip" title="Pagina principal" data-placement="bottom" routerLink="/inicio">Inicio
                         <!-- <i class="fa fa-align-center" aria-hidden="true">hola</i> -->
                         <!-- <p class="d-lg-none">Inicio</p> -->
                     </a>
@@ -33,6 +33,30 @@
                     </a>
                 </li>
                 <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a class="nav-link" rel="tooltip" title="Contacto" data-placement="bottom" routerLink="/contacto">Contacto
+                        <!-- <i class="fa fa-github"></i> -->
+                        <!-- <p class="d-lg-none">GitHub</p> -->
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="isDocumentation()">
+                    <a class="nav-link" rel="tooltip" title="Pagina principal" data-placement="bottom" routerLink="/admin">Inicio
+                        <!-- <i class="fa fa-align-center" aria-hidden="true">hola</i> -->
+                        <!-- <p class="d-lg-none">Inicio</p> -->
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="isDocumentation()">
+                    <a class="nav-link" rel="tooltip" title="Tienda" data-placement="bottom" routerLink="/tienda">Pedidos
+                        <!-- <i class="fa fa-facebook-square"></i> -->
+                        <!-- <p class="d-lg-none">Facebook</p> -->
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="isDocumentation()">
+                    <a class="nav-link" rel="tooltip" title="Acerca de nosotros" data-placement="bottom" routerLink="/nosotros">Acerca de nosotros
+                        <!-- <i class="fa fa-instagram"></i> -->
+                        <!-- <p class="d-lg-none">Instagram</p> -->
+                    </a>
+                </li>
+                <li class="nav-item" *ngIf="isDocumentation()">
                     <a class="nav-link" rel="tooltip" title="Contacto" data-placement="bottom" routerLink="/contacto">Contacto
                         <!-- <i class="fa fa-github"></i> -->
                         <!-- <p class="d-lg-none">GitHub</p> -->
