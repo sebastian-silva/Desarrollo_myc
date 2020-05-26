@@ -13,7 +13,7 @@ import { OfertasComponent } from './pages/inicio/ofertas/ofertas.component';
 import { MenuComponent } from './pages/inicio/menu/menu.component';
 import { LoginComponent } from './pages/login/login.component';
 import { EntradaComponent } from './pages/inicio/entrada/entrada.component';
-import{HttpClientModule}from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
