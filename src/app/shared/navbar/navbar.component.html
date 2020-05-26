@@ -1,7 +1,11 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="500" >
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" href="#" style="margin-bottom: -15px;">
+            <a *ngIf="!isAdmin()" class="navbar-brand" routerLink="/home" style="margin-bottom: -15px;">
+                <img  src="assets/img/LogoMiel2.png" width="88.4" height="78.2" srcset="assets/img/LogoMiel2.png 2x" style="margin-top: -20px;"/>
+            </a>
+
+            <a *ngIf="isAdmin()" class="navbar-brand" routerLink="/admin" style="margin-bottom: -15px;">
                 <img  src="assets/img/LogoMiel2.png" width="88.4" height="78.2" srcset="assets/img/LogoMiel2.png 2x" style="margin-top: -20px;"/>
             </a>
             
@@ -14,52 +18,36 @@
         <div class="navbar-collapse" id="navbarToggler">
             
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item" *ngIf="!isDocumentation()">
-                    <a class="nav-link" rel="tooltip" title="Pagina principal" data-placement="bottom" routerLink="/inicio">Inicio
-                        <!-- <i class="fa fa-align-center" aria-hidden="true">hola</i> -->
-                        <!-- <p class="d-lg-none">Inicio</p> -->
+                <li class="nav-item" *ngIf="!isAdmin()">
+                    <a class="nav-link" rel="tooltip" title="Pagina principal" data-placement="bottom" routerLink="/home">Inicio
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="!isDocumentation()">
+                <li class="nav-item" *ngIf="!isAdmin()">
                     <a class="nav-link" rel="tooltip" title="Tienda" data-placement="bottom" routerLink="/tienda">Tienda
-                        <!-- <i class="fa fa-facebook-square"></i> -->
-                        <!-- <p class="d-lg-none">Facebook</p> -->
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="!isDocumentation()">
+                <li class="nav-item" *ngIf="!isAdmin()">
                     <a class="nav-link" rel="tooltip" title="Acerca de nosotros" data-placement="bottom" routerLink="/nosotros">Acerca de nosotros
-                        <!-- <i class="fa fa-instagram"></i> -->
-                        <!-- <p class="d-lg-none">Instagram</p> -->
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="!isDocumentation()">
+                <li class="nav-item" *ngIf="!isAdmin()">
                     <a class="nav-link" rel="tooltip" title="Contacto" data-placement="bottom" routerLink="/contacto">Contacto
-                        <!-- <i class="fa fa-github"></i> -->
-                        <!-- <p class="d-lg-none">GitHub</p> -->
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="isDocumentation()">
+                <li class="nav-item" *ngIf="isAdmin()">
                     <a class="nav-link" rel="tooltip" title="Pagina principal" data-placement="bottom" routerLink="/admin">Inicio
-                        <!-- <i class="fa fa-align-center" aria-hidden="true">hola</i> -->
-                        <!-- <p class="d-lg-none">Inicio</p> -->
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="isDocumentation()">
-                    <a class="nav-link" rel="tooltip" title="Tienda" data-placement="bottom" routerLink="/tienda">Pedidos
-                        <!-- <i class="fa fa-facebook-square"></i> -->
-                        <!-- <p class="d-lg-none">Facebook</p> -->
+                <li class="nav-item" *ngIf="isAdmin()">
+                    <a class="nav-link" rel="tooltip" title="Tienda" data-placement="bottom" routerLink="/pedidos">Pedidos
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="isDocumentation()">
-                    <a class="nav-link" rel="tooltip" title="Acerca de nosotros" data-placement="bottom" routerLink="/nosotros">Acerca de nosotros
-                        <!-- <i class="fa fa-instagram"></i> -->
-                        <!-- <p class="d-lg-none">Instagram</p> -->
+                <li class="nav-item" *ngIf="isAdmin()">
+                    <a class="nav-link" rel="tooltip" title="Acerca de nosotros" data-placement="bottom" routerLink="/productos">Productos
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="isDocumentation()">
-                    <a class="nav-link" rel="tooltip" title="Contacto" data-placement="bottom" routerLink="/contacto">Contacto
-                        <!-- <i class="fa fa-github"></i> -->
-                        <!-- <p class="d-lg-none">GitHub</p> -->
+                <li class="nav-item" *ngIf="isAdmin()">
+                    <a class="nav-link" rel="tooltip" title="Contacto" data-placement="bottom" routerLink="/disenos">Diseños
                     </a>
                 </li>
                 <li class="nav-item" >
