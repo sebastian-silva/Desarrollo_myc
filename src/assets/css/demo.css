@@ -1279,3 +1279,9 @@ pre.prettyprint {
     color: #ffffff;
     -webkit-text-stroke: 2px #6c4523;
 }
+
+.btn-fix {
+    padding: 0;
+    border: none;
+    white-space: normal;
+     }

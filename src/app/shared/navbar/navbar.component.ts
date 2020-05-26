@@ -61,12 +61,8 @@ export class NavbarComponent implements OnInit {
             return false;
         }
     }
-    isDocumentation() {
-      var titlee = this.location.prepareExternalUrl(this.location.path());
-      if(titlee.charAt(0) === '#'){
-          titlee = titlee.slice( 1 );
-      }
-        if( titlee === '/admin' ) {
+    isAdmin() {
+        if(this.usuarioSer.usuarioActivo.idUsuario==1) {
             return true;
         }
         else {
@@ -77,6 +73,5 @@ export class NavbarComponent implements OnInit {
     cerrarSesion(){
         this.usuarioSer.usuarioActivo.idUsuario=0;
         this.usuarioSer.usuarioActivo.nombre="";
-      }
-    
+    }
 }

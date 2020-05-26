@@ -21,6 +21,11 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { ComponentsComponent } from './pages/components/components.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { CargarImgComponent } from './pages/cargar-img/cargar-img.component';
+import { ProductosComponent } from './pages/admin/productos/productos.component';
+import { PedidosComponent } from './pages/admin/pedidos/pedidos.component';
+import { DisenosComponent } from './pages/admin/disenos/disenos.component';
+import { PrimpagComponent } from './pages/admin/primpag/primpag.component';
+import { ErrorComponent } from './pages/admin/error/error.component';
 
 
 @NgModule({
@@ -40,7 +45,12 @@ import { CargarImgComponent } from './pages/cargar-img/cargar-img.component';
     ContactoComponent,
     ComponentsComponent,
     AdminComponent,
-    CargarImgComponent
+    CargarImgComponent,
+    ProductosComponent,
+    PedidosComponent,
+    DisenosComponent,
+    PrimpagComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

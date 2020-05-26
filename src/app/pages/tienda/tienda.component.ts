@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tienda',
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TiendaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ruta: Router) { }
 
   ngOnInit(): void {
   }
-
 }
