@@ -14,6 +14,16 @@
         <div class="navbar-collapse" id="navbarToggler">
             
             <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item" *ngIf="!isDocumentation()">
+                    <a class="nav-link" rel="tooltip" title="Pagina principal" data-placement="bottom" routerLink="/cargar">Cargar imagen
+                        <!-- <i class="fa fa-align-center" aria-hidden="true">hola</i> -->
+                        <!-- <p class="d-lg-none">Inicio</p> -->
+                    </a>
+                </li>
+
+
+
                 <li class="nav-item" *ngIf="!isDocumentation()">
                     <a class="nav-link" rel="tooltip" title="Pagina principal" data-placement="bottom" routerLink="/inicio">Inicio
                         <!-- <i class="fa fa-align-center" aria-hidden="true">hola</i> -->

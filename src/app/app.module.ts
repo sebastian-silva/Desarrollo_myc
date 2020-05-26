@@ -20,6 +20,7 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { ComponentsComponent } from './pages/components/components.component';
 import { AdminComponent } from './pages/admin/admin.component';
+import { CargarImgComponent } from './pages/cargar-img/cargar-img.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { AdminComponent } from './pages/admin/admin.component';
     NosotrosComponent,
     ContactoComponent,
     ComponentsComponent,
-    AdminComponent
+    AdminComponent,
+    CargarImgComponent
   ],
   imports: [
     BrowserModule,
