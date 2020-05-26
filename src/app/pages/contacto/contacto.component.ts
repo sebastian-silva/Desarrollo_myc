@@ -13,6 +13,7 @@ export class ContactoComponent implements OnInit {
   formularioCorreo:FormGroup;
   CorreoTempo: Correo= new Correo();
   mensaje: String = new String();
+  carga : Boolean = new Boolean();
   constructor(private formulario:FormBuilder, public envioCorreos:CorreosService ) { }
 
   ngOnInit(): void {
@@ -24,16 +25,24 @@ export class ContactoComponent implements OnInit {
       ])],  
       cuerpo:['',Validators.required]
     });
+    this.carga=false;
   }
 
   enviarCorreo(){
     if(this.formularioCorreo.valid){
+      this.carga=true;
       this.CorreoTempo=this.formularioCorreo.value as Correo
-
-      this.envioCorreos.enviarCorreo(this.CorreoTempo).subscribe((String)=>{
+      this.envioCorreos.enviarCorreo(this.CorreoTempo).subscribe( (String)=>{
+        this.carga=false;
         console.log("Se envio correo ")
         this.mensaje="Se mando el correo"
-      });
+        this.formularioCorreo.reset();
+      },
+      (error)=>{
+        this.carga=false;
+        console.log("Ocurrio un error :(")
+        console.log(error)
+      }  );
       
     }
   }

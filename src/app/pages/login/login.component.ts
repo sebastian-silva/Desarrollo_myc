@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     if(this.formularioIngreso.valid){
       this.usuarioTempo=this.formularioIngreso.value as Usuario
       this.usuarioTempo.idUsuario=0;
-      this.ingresoSer.comprobarUsuario(this.usuarioTempo).subscribe((usuarioR)=>{
+      this.ingresoSer.comprobarUsuario(this.usuarioTempo).subscribe( (usuarioR)=>{
         if(usuarioR.puntos==1){
           this.mensaje="No encontramos tu correo, puedes crear tu cuenta gratis 😄 "  
         }else if(usuarioR.puntos==2){
@@ -47,9 +47,13 @@ export class LoginComponent implements OnInit {
             }
           })
         }
-      });
-      
+      },
+      (error)=>{
+        console.log("Obtubimos un error")
+      }
+      )
     }
+    ;
   }
 
 }
