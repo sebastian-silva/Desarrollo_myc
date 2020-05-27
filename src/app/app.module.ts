@@ -20,6 +20,7 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { ComponentsComponent } from './pages/components/components.component';
 import { AdminComponent } from './pages/admin/admin.component';
+import { CargarImgComponent } from './pages/cargar-img/cargar-img.component';
 import { ProductosComponent } from './pages/admin/productos/productos.component';
 import { PedidosComponent } from './pages/admin/pedidos/pedidos.component';
 import { DisenosComponent } from './pages/admin/disenos/disenos.component';
@@ -49,6 +50,7 @@ import { UploadComponent } from './pages/upload/upload.component';
     ContactoComponent,
     ComponentsComponent,
     AdminComponent,
+    CargarImgComponent,
     ProductosComponent,
     PedidosComponent,
     DisenosComponent,
