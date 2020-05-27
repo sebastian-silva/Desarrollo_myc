@@ -13,6 +13,9 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { DisenosComponent } from './pages/admin/disenos/disenos.component';
 import { PedidosComponent } from './pages/admin/pedidos/pedidos.component';
 import { ProductosComponent } from './pages/admin/productos/productos.component';
+import { AdminprodComponent } from './pages/admin/productos/adminprod/adminprod.component';
+import { AdminadiccComponent } from './pages/admin/productos/adminadicc/adminadicc.component';
+import { AdmindesayComponent } from './pages/admin/productos/admindesay/admindesay.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -25,7 +28,10 @@ const routes: Routes =[
     { path: 'admin', component: AdminComponent },
     { path: 'disenos', component: DisenosComponent},
     { path: 'pedidos', component: PedidosComponent},
-    { path: 'productos', component: ProductosComponent}
+    { path: 'productos', component: ProductosComponent},
+    { path: 'adminprod', component: AdminprodComponent},
+    { path: 'adminadicc', component: AdminadiccComponent},
+    { path: 'admindesay', component: AdmindesayComponent}
 ];
 
 @NgModule({
