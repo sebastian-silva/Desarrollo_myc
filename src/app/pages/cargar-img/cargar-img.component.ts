@@ -15,10 +15,14 @@ export class CargarImgComponent {
   retrieveResonse: any;
   message: string;
   imageName: any;
+  imageShow: any;
   //Gets called when the user selects an image
+
   public onFileChanged(event) {
     //Select File
     this.selectedFile = event.target.files[0];
+    this.imageShow= 'data:image/jpeg;base64,' + this.selectedFile;
+    console.log(this.selectedFile);
   }
   //Gets called when the user clicks on submit to upload the image
   onUpload() {
