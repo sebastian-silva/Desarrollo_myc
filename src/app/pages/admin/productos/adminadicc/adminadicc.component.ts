@@ -13,3 +13,4 @@ export class AdminadiccComponent implements OnInit {
   }
 
 }
+
