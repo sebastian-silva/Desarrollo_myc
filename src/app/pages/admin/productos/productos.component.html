@@ -1,0 +1,13 @@
+<div class="wrapper" >
+    <div *ngIf="esAdmin()" class="main">
+        <div class="wrapper">
+            <div class="page-header" style="background-image: url('./assets/img/login-image.jpg');">
+                <app-prods></app-prods>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!esAdmin()" class="main">
+        <app-error></app-error>
+    </div>
+</div>
+

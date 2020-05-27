@@ -7,6 +7,8 @@ import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SomosComponent } from './pages/inicio/somos/somos.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { UsuarioService } from './servicios/usuario.service';
+import { Usuario } from './Modelo/Usuario';
 
 @Component({
     selector: 'app-root',
@@ -15,10 +17,14 @@ import { FooterComponent } from './shared/footer/footer.component';
 })
 export class AppComponent implements OnInit {
     private _router: Subscription;
+    usuarioA: Usuario= new Usuario();
     @ViewChild(NavbarComponent) navbar: NavbarComponent;
 
-    constructor( private renderer : Renderer2, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location) {}
+    constructor( private renderer : Renderer2, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location, public usuarioSer:UsuarioService) {}
     ngOnInit() {
+        this.usuarioA = this.usuarioSer.usuarioActivo;
+        console.log(this.usuarioA.nombre)
+        
         var navbar : HTMLElement = this.element.nativeElement.children[0].children[0];
         this._router = this.router.events.filter(event => event instanceof NavigationEnd).subscribe((event: NavigationEnd) => {
             if (window.outerWidth > 991) {

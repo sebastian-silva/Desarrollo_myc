@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
-
+import{Usuario} from '../../Modelo/Usuario';
+import { UsuarioService } from '../../servicios/usuario.service';
 @Component({
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
@@ -10,14 +11,15 @@ export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
 
-    constructor(public location: Location, private element : ElementRef) {
+    constructor(public location: Location, private element : ElementRef,public usuarioSer:UsuarioService) {
         this.sidebarVisible = false;
     }
 
-    ngOnInit() {
+    ngOnInit():void {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
     }
+
     sidebarOpen() {
         const toggleButton = this.toggleButton;
         const html = document.getElementsByTagName('html')[0];
@@ -59,16 +61,17 @@ export class NavbarComponent implements OnInit {
             return false;
         }
     }
-    isDocumentation() {
-      var titlee = this.location.prepareExternalUrl(this.location.path());
-      if(titlee.charAt(0) === '#'){
-          titlee = titlee.slice( 1 );
-      }
-        if( titlee === '/documentation' ) {
+    isAdmin() {
+        if(this.usuarioSer.usuarioActivo.idUsuario==1) {
             return true;
         }
         else {
             return false;
         }
+    }
+
+    cerrarSesion(){
+        this.usuarioSer.usuarioActivo.idUsuario=0;
+        this.usuarioSer.usuarioActivo.nombre="";
     }
 }
