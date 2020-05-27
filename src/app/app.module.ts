@@ -25,6 +25,7 @@ import { PedidosComponent } from './pages/admin/pedidos/pedidos.component';
 import { DisenosComponent } from './pages/admin/disenos/disenos.component';
 import { PrimpagComponent } from './pages/admin/primpag/primpag.component';
 import { ErrorComponent } from './pages/admin/error/error.component';
+import { AdminprodComponent } from './pages/admin/productos/adminprod/adminprod.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { ErrorComponent } from './pages/admin/error/error.component';
     PedidosComponent,
     DisenosComponent,
     PrimpagComponent,
-    ErrorComponent
+    ErrorComponent,
+    AdminprodComponent
   ],
   imports: [
     BrowserModule,
