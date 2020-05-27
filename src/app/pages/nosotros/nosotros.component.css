@@ -41,7 +41,7 @@ body {
   }
   
   .title {
-    color: brown;
+    color: #009CDE;
   }
   
   .button {
@@ -57,7 +57,13 @@ body {
   }
   
   .button:hover {
-    background-color: #555;
+    background-color: #009CDE;
+  }
+
+  .iframe-container {
+    margin: auto;
+    width: 30%;
+    border: 3px #00843D;
   }
   
   @media screen and (max-width: 650px) {
