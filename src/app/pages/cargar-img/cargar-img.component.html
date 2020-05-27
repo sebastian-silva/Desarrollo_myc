@@ -16,11 +16,10 @@
 
 <div class="container row">
     <div class="col-md-12">
-        <div *ngIf=retrievedImage>
-            <img [src]="imageShow">
-        </div>
+            <img [src]="imageShow" height="200" *ngIf="imageShow">
     </div>
 </div>
+
 
 <hr />
 <div class="container row">

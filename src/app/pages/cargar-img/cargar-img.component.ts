@@ -1,4 +1,3 @@
-
 import { HttpClient, HttpEventType } from '@angular/common/http';
 import { Component } from '@angular/core';
 @Component({
@@ -16,13 +15,26 @@ export class CargarImgComponent {
   message: string;
   imageName: any;
   imageShow: any;
+  public imagePath;
   //Gets called when the user selects an image
 
-  public onFileChanged(event) {
+  onFileChanged(event) {
     //Select File
+    if(event.target.files.length==0)
+    return;
+    var mineType=event.target.files[0].type;
+    if(mineType.match(/image\/*/)==null){
+      this.message="Solo se admiten imagenes";
+      return;
+    }
     this.selectedFile = event.target.files[0];
-    this.imageShow= 'data:image/jpeg;base64,' + this.selectedFile;
-    console.log(this.selectedFile);
+    var reader= new FileReader();
+    this.imagePath = event.target.files;
+    reader.readAsDataURL(event.target.files[0]);
+    reader.onload=(_e)=>{
+      this.imageShow=reader.result;
+      console.log(reader.result)
+    }
   }
   //Gets called when the user clicks on submit to upload the image
   onUpload() {
@@ -44,6 +56,7 @@ export class CargarImgComponent {
       );
   }
     //Gets called when the user clicks on retieve image button to get the image from back end
+    
     getImage() {
     //Make a call to Sprinf Boot to get the Image Bytes.
     this.httpClient.get('http://localhost:8080/image/get/' + this.imageName)
