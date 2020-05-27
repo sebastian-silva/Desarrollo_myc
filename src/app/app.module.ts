@@ -26,6 +26,9 @@ import { DisenosComponent } from './pages/admin/disenos/disenos.component';
 import { PrimpagComponent } from './pages/admin/primpag/primpag.component';
 import { ErrorComponent } from './pages/admin/error/error.component';
 import { AdminprodComponent } from './pages/admin/productos/adminprod/adminprod.component';
+import { ProdsComponent } from './pages/admin/productos/prods/prods.component';
+import { AdminadiccComponent } from './pages/admin/productos/adminadicc/adminadicc.component';
+import { AdmindesayComponent } from './pages/admin/productos/admindesay/admindesay.component';
 
 
 @NgModule({
@@ -50,7 +53,10 @@ import { AdminprodComponent } from './pages/admin/productos/adminprod/adminprod.
     DisenosComponent,
     PrimpagComponent,
     ErrorComponent,
-    AdminprodComponent
+    AdminprodComponent,
+    ProdsComponent,
+    AdminadiccComponent,
+    AdmindesayComponent
   ],
   imports: [
     BrowserModule,
