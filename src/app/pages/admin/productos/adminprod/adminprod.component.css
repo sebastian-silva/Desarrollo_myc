@@ -150,3 +150,35 @@
 ::placeholder {
   color: rgb(65, 65, 65);
 }
+
+.subir{
+  padding: 5px 10px;
+  background: #009CDE;
+  color:#fff;
+  border:0px solid #fff;
+}
+
+.subir:hover{
+  color:#fff;
+  background: rgb(8, 92, 128);
+}
+
+.ratio {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  width: 100%;
+}
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.cont{
+  width: 100px;
+  height: 100px;
+}
