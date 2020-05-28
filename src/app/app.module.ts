@@ -29,6 +29,7 @@ import { AdminprodComponent } from './pages/admin/productos/adminprod/adminprod.
 import { ProdsComponent } from './pages/admin/productos/prods/prods.component';
 import { AdminadiccComponent } from './pages/admin/productos/adminadicc/adminadicc.component';
 import { AdmindesayComponent } from './pages/admin/productos/admindesay/admindesay.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { AdmindesayComponent } from './pages/admin/productos/admindesay/admindes
     AdminprodComponent,
     ProdsComponent,
     AdminadiccComponent,
-    AdmindesayComponent
+    AdmindesayComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
