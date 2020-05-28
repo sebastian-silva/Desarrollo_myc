@@ -1,18 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Producto } from 'app/Modelo/Producto';
+import { Adicion } from 'app/Modelo/Adicion';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductoService {
-  producto: Producto = new Producto();
+export class AdicionService {
+  adicion: Adicion = new Adicion();
   ruta: string='http://localhost:8080'
-  
   constructor(private http:HttpClient) { }
 
-  guardarUsuario(producto:Producto):Observable<Producto>{
-    return this.http.post<Producto>(this.ruta+'/productos',producto)
+  guardarUsuario(adicion:Adicion):Observable<Adicion>{
+    return this.http.post<Adicion>(this.ruta+'/adiciones',adicion)
   }
 }

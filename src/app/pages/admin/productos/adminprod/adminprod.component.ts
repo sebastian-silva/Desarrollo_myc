@@ -20,8 +20,7 @@ export class AdminprodComponent implements OnInit {
   imageShow: any;
   imagenCargada :Boolean;
   cambio: any
-  constructor(private modalService: NgbModal, private formulario:FormBuilder, public productoSer:ProductoService,private httpClient: HttpClient ) {
-   }
+  constructor(private modalService: NgbModal, private formulario:FormBuilder, public productoSer:ProductoService,private httpClient: HttpClient ) {}
   ngOnInit(): void {
     this.imageShow="assets/img/signo.png";
     this.imagenCargada=false;
@@ -33,7 +32,6 @@ export class AdminprodComponent implements OnInit {
       sal:['',Validators.required],
       proteina:['',Validators.required]
     });
-    console.log((!this.formularioProducto.valid) && (!this.imagenCargada))
   }
 
   ver(modal){
