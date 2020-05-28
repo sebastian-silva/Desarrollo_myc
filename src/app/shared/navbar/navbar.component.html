@@ -23,12 +23,6 @@
                     <a class="nav-link" rel="tooltip" title="Pagina principal" data-placement="bottom" routerLink="/home">Inicio
                     </a>
                 </li>
-
-                <li class="nav-item" *ngIf="isAdmin()">
-                    <a class="nav-link" rel="tooltip" title="Pagina principal" data-placement="bottom" routerLink="/cargar">Cargar imagen
-                    </a>
-                </li>
-
                 <li class="nav-item" *ngIf="!isAdmin()">
                     <a class="nav-link" rel="tooltip" title="Tienda" data-placement="bottom" routerLink="/tienda">Tienda
                     </a>
@@ -51,10 +45,6 @@
                 </li>
                 <li class="nav-item" *ngIf="isAdmin()">
                     <a class="nav-link" rel="tooltip" title="Acerca de nosotros" data-placement="bottom" routerLink="/productos">Productos
-                    </a>
-                </li>
-                <li class="nav-item" *ngIf="isAdmin()">
-                    <a class="nav-link" rel="tooltip" title="Contacto" data-placement="bottom" routerLink="/disenos">Diseños
                     </a>
                 </li>
                 <li class="nav-item" >
