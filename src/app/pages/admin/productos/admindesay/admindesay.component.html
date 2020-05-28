@@ -12,6 +12,7 @@
                             <th ><h1>Precio</h1></th>
                             <th ><h1>Productos</h1></th>
                             <th ><h1>Agregados</h1></th>
+                            <th ><h1>Valor nutricional</h1></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -23,6 +24,7 @@
                             <td>$9518</td>
                             <td (click)="valnut(products)">Producto</td>
                             <td (click)="valnut(agrg)">agregado</td>
+                            <td (click)="valnut(valn)">ver</td>
                         </tr>
                         <tr>
                             <td (click)="ver(verdesay)">
@@ -32,6 +34,7 @@
                             <td>$9518</td>
                             <td (click)="valnut(products)">Producto</td>
                             <td (click)="valnut(agrg)">agregado</td>
+                            <td (click)="valnut(valn)">ver</td>
                         </tr>
                         <tr>
                             <td (click)="ver(verdesay)">
@@ -41,6 +44,7 @@
                             <td>$9518</td>
                             <td (click)="valnut(products)">Producto</td>
                             <td (click)="valnut(agrg)">agregado</td>
+                            <td (click)="valnut(valn)">ver</td>
                         </tr>
                     </tbody>
                     </table>
@@ -49,7 +53,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <button class="btn btn-danger" style="background-color: #6c4523; border-color: #6c4523;" (click)="ver(mimens)">Nuevo desayuno</button>
+                <button class="btn btn-danger" style="background-color: #6c4523; border-color: #6c4523;" (click)="ver(nuevodesay)">Nuevo desayuno</button>
             </div>
             <div class="col">
                 <button class="btn btn-danger" style="background-color: #6c4523; border-color: #6c4523;" (click)="ver(agregarprod)">Agregar producto</button>
@@ -123,6 +127,28 @@
     </div>
     <div class="modal-body">
         <div class="row">
+            <div class="col">
+                <div class="input-group form-group-no-border">
+                      <input type="text" class="form-control" placeholder="Nombre">
+                </div>
+                <br>
+                <div class="input-group form-group-no-border">
+                      <input type="text" class="form-control" placeholder="Precio">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer centrar">
+        <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
+    </div>
+  </ng-template>
+
+  <ng-template #verdesay>
+    <div class="modal-header mhead" style="background-color: #009CDE;">
+        <p class="heading lead">Titulo</p>
+    </div>
+    <div class="modal-body">
+        <div class="row">
             <div class="col-auto">
                 <div class="card imagenmed" style="background-color: rgba(114, 114, 114, 0);">
                     <a class="btn btn-fix text-left" >
@@ -149,47 +175,8 @@
         <input type="number" class="form-control inputtx" placeholder="Proteina">
     </div>
     <div class="modal-footer centrar">
-        <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
-    </div>
-  </ng-template>
-
-  <ng-template #verdesay>
-    <div class="modal-header mhead" style="background-color: #009CDE;">
-        <p class="heading lead">Titulo</p>
-    </div>
-    <div class="modal-body">
         <div class="row">
-            <div class="col-auto">
-                <div class="card imagenmed" style="background-color: rgba(114, 114, 114, 0);">
-                    <a class="btn btn-fix text-left" >
-                      <img class="card-img-top img-fluid rounded" src="assets/img/signo.png" alt="Card image cap" style="background-color: white;">
-                    </a> 
-                </div>
-            </div>
-            <div class="col">
-                <div class="input-group form-group-no-border">
-                      <input type="text" class="form-control" placeholder="Nombre" readonly>
-                </div>
-                <br>
-                <div class="input-group form-group-no-border">
-                      <input type="text" class="form-control" placeholder="Precio">
-                </div>
-            </div>
-        </div>
-        <div class="row centrar">
-            <p>Valor nutricional</p>
-        </div>
-        <input type="number" class="form-control inputtx" placeholder="Grasa">
-        <input type="number" class="form-control inputtx" placeholder="Azucar">
-        <input type="number" class="form-control inputtx" placeholder="Sal">
-        <input type="number" class="form-control inputtx" placeholder="Proteina">
-    </div>
-    <div class="modal-footer centrar">
-        <div class="row">
-            <div class="col">
-                <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Modificar</button>
-                <button class="btn btn-danger btn-block" style="background-color: #ff0000; border-color: #ff0000;">Eliminar</button>
-            </div>
+            <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Modificar</button>
         </div>
     </div>
   </ng-template>
@@ -267,9 +254,43 @@
         <br>
     </div>
     <div class="modal-footer centrar">
-        <div class="col">
-            <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Modificar</button>
-            <button class="btn btn-danger btn-block" style="background-color: #ff0000; border-color: #ff0000;">Eliminar</button>
+    </div>
+  </ng-template>
+
+  <ng-template #nuevodesay>
+    <div class="modal-header mhead" style="background-color: #009CDE;">
+        <p class="heading lead">Titulo</p>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-auto">
+                <div class="card imagenmed" style="background-color: rgba(114, 114, 114, 0);">
+                    <a class="btn btn-fix text-left" >
+                      <img class="card-img-top img-fluid rounded" src="assets/img/signo.png" alt="Card image cap" style="background-color: white;">
+                    </a> 
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group form-group-no-border">
+                      <input type="text" class="form-control" placeholder="Nombre">
+                </div>
+                <br>
+                <div class="input-group form-group-no-border">
+                      <input type="text" class="form-control" placeholder="Precio">
+                </div>
+            </div>
+        </div>
+        <div class="row centrar">
+            <p>Valor nutricional</p>
+        </div>
+        <input type="number" class="form-control inputtx" placeholder="Grasa">
+        <input type="number" class="form-control inputtx" placeholder="Azucar">
+        <input type="number" class="form-control inputtx" placeholder="Sal">
+        <input type="number" class="form-control inputtx" placeholder="Proteina">
+    </div>
+    <div class="modal-footer centrar">
+        <div class="row">
+                <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
         </div>
     </div>
   </ng-template>
