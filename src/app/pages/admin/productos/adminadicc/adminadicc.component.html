@@ -61,6 +61,7 @@
 </div>
 
 <ng-template #mimens>
+    <form [formGroup]="formularioAdicion" >
     <div class="modal-header mhead" style="background-color: #009CDE;">
         <p class="heading lead">Producto nuevo</p>
     </div>
@@ -69,31 +70,33 @@
             <div class="col-auto">
                 <div class="card imagenmed" style="background-color: rgba(114, 114, 114, 0);">
                     <a class="btn btn-fix text-left" >
-                      <img class="card-img-top img-fluid rounded" src="assets/img/signo.png" alt="Card image cap" style="background-color: white;">
+                      <img class="card-img-top img-fluid rounded" [src]="imageShow" alt="Card image cap" style="background-color: white;">
+                      <input type="file" (change)="cargarImg($event)">
                     </a> 
                 </div>
             </div>
             <div class="col">
                 <div class="input-group form-group-no-border">
-                      <input type="text" class="form-control" placeholder="Nombre">
+                      <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
                 </div>
                 <br>
                 <div class="input-group form-group-no-border">
-                      <input type="text" class="form-control" placeholder="Precio">
+                      <input type="text" class="form-control" formControlName="precio" placeholder="Precio">
                 </div>
             </div>
         </div>
         <div class="row centrar">
             <p>Valor nutricional</p>
         </div>
-        <input type="number" class="form-control inputtx" placeholder="Grasa">
-        <input type="number" class="form-control inputtx" placeholder="Azucar">
-        <input type="number" class="form-control inputtx" placeholder="Sal">
-        <input type="number" class="form-control inputtx" placeholder="Proteina">
+        <input type="number" class="form-control inputtx" formControlName="grasa"  placeholder="Grasa">
+        <input type="number" class="form-control inputtx" formControlName="azucar" placeholder="Azucar">
+        <input type="number" class="form-control inputtx" formControlName="sal" placeholder="Sal">
+        <input type="number" class="form-control inputtx"  formControlName="proteina"  placeholder="Proteina">
     </div>
     <div class="modal-footer centrar">
-        <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
+        <button class="btn btn-danger btn-block" (click)="agregarAdicion()" [disabled]="((!formularioAdicion.valid) || (!imagenCargada))" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
     </div>
+</form>
   </ng-template>
 
   <ng-template #prod>

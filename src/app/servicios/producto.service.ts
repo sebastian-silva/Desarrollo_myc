@@ -9,9 +9,19 @@ import { Observable } from 'rxjs';
 export class ProductoService {
   producto: Producto = new Producto();
   ruta: string='http://localhost:8080'
+  
   constructor(private http:HttpClient) { }
 
   guardarUsuario(producto:Producto):Observable<Producto>{
     return this.http.post<Producto>(this.ruta+'/productos',producto)
   }
+
+  ObtenerProductos():Observable<Producto[]>{
+    return this.http.get<Producto[]>(this.ruta+'/productos')
+  }
+
+  editarProducto(producto:Producto):Observable<Producto>{
+    return this.http.put<Producto>(this.ruta +'/productos/',producto)
+  }
+
 }

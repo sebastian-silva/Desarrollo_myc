@@ -14,6 +14,7 @@
                         </tr>
                     </thead>
                     <tbody>
+
                         <tr>
                             <td (click)="ver(mostrarprod)">
                                 <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
@@ -22,29 +23,14 @@
                             <td>$9518</td>
                             <td (click)="ver(valn)">ver</td>
                         </tr>
-                        <tr>
-                            <td routerLink="/home">
+
+                        <tr *ngFor="let producto of todosProductos">
+                            <td (click)="verCambio(mimens, producto)">
                                 <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
+                                {{producto.nombre}}
                             </td>
-                            <td>9518</td>
-                            <td>6369</td>
-                        </tr>
-                        <tr>
-                            <td routerLink="/home">
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>9518</td>
-                            <td>6369</td>
-                        </tr>
-                        <tr>
-                            <td routerLink="/home">
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>9518</td>
-                            <td>6369</td>
+                            <td>$ {{producto.precio}}</td>
+                            <td (click)="ver(valn,producto.grasa,producto.azucar,producto.sal,producto.proteina)">ver</td>
                         </tr>
                     </tbody>
                 </table>
@@ -63,7 +49,7 @@
 
 
 <ng-template #mimens>
-    <form [formGroup]="formularioProducto" >
+    <form [formGroup]="formularioEditProducto" >
     <div class="modal-header mhead" style="background-color: #009CDE;">
         <p class="heading lead">Titulo</p>
     </div>
@@ -88,11 +74,11 @@
             
             <div class="col">
                 <div class="input-group form-group-no-border">
-                      <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
+                      <input [(ngModel)]="productoEdit.nombre" type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
                 </div>
                 <br>
                 <div class="input-group form-group-no-border">
-                      <input type="number" class="form-control" formControlName="precio" placeholder="Precio">
+                      <input [(ngModel)]="productoEdit.precio" type="number" class="form-control" formControlName="precio" placeholder="Precio">
                 </div>
             </div>
         </div>
@@ -100,18 +86,18 @@
             <p>Valor nutricional</p>
         </div>
 
-                <input type="number" class="form-control inputtx" formControlName="grasa" placeholder="Grasa">
+                <input [(ngModel)]="productoEdit.grasa" type="number" class="form-control inputtx" formControlName="grasa" placeholder="Grasa">
 
-                <input type="number" class="form-control inputtx" formControlName="azucar" placeholder="Azucar">
+                <input [(ngModel)]="productoEdit.azucar" type="number" class="form-control inputtx" formControlName="azucar" placeholder="Azucar">
 
-                <input type="number" class="form-control inputtx" formControlName="sal" placeholder="Sal">
+                <input [(ngModel)]="productoEdit.sal" type="number" class="form-control inputtx" formControlName="sal" placeholder="Sal">
 
-                <input type="number" class="form-control inputtx" formControlName="proteina" placeholder="Proteina">
+                <input [(ngModel)]="productoEdit.proteina" type="number" class="form-control inputtx" formControlName="proteina" placeholder="Proteina">
 
 
     </div>
     <div class="modal-footer centrar">
-        <button class="btn btn-danger btn-block" (click)="agregarProducto()" [disabled]="((!formularioProducto.valid) || (!imagenCargada))" style="background-color: #00824a; border-color: #00824a;">Modificar</button>
+        <button class="btn btn-danger btn-block" (click)="editarProducto()" [disabled]="((!formularioEditProducto.valid) || (!imagenCargada))" style="background-color: #00824a; border-color: #00824a;">Modificar</button>
     </div>
 </form>
   </ng-template>
@@ -177,10 +163,10 @@
     <div class="modal-body" style="text-align: center;">
         <p><strong>Valor nutricional</strong></p>
         <br>
-        <p>Azucar: </p>
-        <p>Grasa: </p>
-        <p>Sal: </p>
-        <p>Proteinas: </p>
+        <p>Azucar: {{grasa}} </p>
+        <p>Grasa: {{azucar}} </p>
+        <p>Sal: {{sal}} </p>
+        <p>Proteinas: {{proteina}} </p>
         <br>
     </div>
     <div class="modal-footer centrar">
