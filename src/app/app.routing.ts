@@ -19,6 +19,7 @@ import { ProductosComponent } from './pages/admin/productos/productos.component'
 import { AdminprodComponent } from './pages/admin/productos/adminprod/adminprod.component';
 import { AdminadiccComponent } from './pages/admin/productos/adminadicc/adminadicc.component';
 import { AdmindesayComponent } from './pages/admin/productos/admindesay/admindesay.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 import { AdminpersonComponent } from './pages/admin/productos/adminperson/adminperson.component';
 
 const routes: Routes =[
@@ -39,6 +40,7 @@ const routes: Routes =[
     { path: 'adminprod', component: AdminprodComponent},
     { path: 'adminadicc', component: AdminadiccComponent},
     { path: 'admindesay', component: AdmindesayComponent},
+    { path: 'carrito', component: CarritoComponent},
     { path: 'adminperson', component: AdminpersonComponent}
 ];
 
