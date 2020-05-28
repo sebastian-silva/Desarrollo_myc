@@ -27,6 +27,20 @@ css/default-colors.css << File
 
 
 /***General & Basic Styles**/
+h3 {font-size: 18px;line-height: 1.5em;}
+hr.soften {margin: 8px 0;background: #DDD;}
+.spaceBtm{padding-bottom:8px}
+.form-horizontal.qtyFrm .control-label{text-align: left;}
+.form-horizontal.qtyFrm .control-label span{font-size:18px}
+#productDetail {margin-bottom:0}
+.tabWrapper{background:#fff; padding:14px; border:1px solid #ddd; border-top:0}
+#productView .btn-toolbar{padding-left:3px;}
+.justify{text-align:justify;}
+.table td[align=right] {text-align: right;}
+.shopBtn {min-height: 34px;font-size: 14px;font-weight: bold;line-height: 34px;text-align: center;color: #fff;border-radius: 2px;background: #f89406;display:inline-block;padding:0 12px;border:0;}
+.defaultBtn {min-height: 34px;font-size: 14px;font-weight: bold;line-height: 34px;text-align: center;border-radius: 2px;display:inline-block;padding:0 12px;color: #666;text-decoration: none;background: #e6e6e6;border:0;}
+.shopBtn:hover {color: #fff; text-decoration:none; background:#F86706}
+
 body {
     padding: 0;
     margin: 0;
