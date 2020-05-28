@@ -15,12 +15,12 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td routerLink="/home">
+                            <td (click)="ver(mostrarprod)">
                                 <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
                                 Google
                             </td>
-                            <td>9518</td>
-                            <td>ver</td>
+                            <td>$9518</td>
+                            <td (click)="ver(valn)">ver</td>
                         </tr>
                         <tr>
                             <td routerLink="/home">
@@ -63,6 +63,63 @@
 
 
 <ng-template #mimens>
+    <form [formGroup]="formularioProducto" >
+    <div class="modal-header mhead" style="background-color: #009CDE;">
+        <p class="heading lead">Titulo</p>
+    </div>
+    <div class="modal-body">
+        
+        <div class="row">
+            <div class="col-auto">
+                <!-- <div class="">
+                    <div  class="ratio img-responsive" [ngStyle]="{background: 'url(' + imageShow + ')'}" style="max-width: 100px;max-height: 100px;"></div>
+                </div> -->
+                <div class="card imagenmed" style="background-color: rgba(114, 114, 114, 0);">
+                    <a class="btn btn-fix text-left" >
+                      <img class="card-img-top img-fluid rounded" [src]="imageShow" alt="Card image cap" style="background-color: white;">    
+                    </a> 
+                </div>
+                <div class=" centrar">
+                    <label for="file-upload" class="subir">
+                    <i class=""></i> Subir archivo
+                    </label>
+                    <input id="file-upload" type="file" (change)="cargarImg($event)" style='display: none;'/>
+                    <div id="info"></div>
+                </div>
+                
+            </div>
+            
+            <div class="col">
+                <div class="input-group form-group-no-border">
+                      <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
+                </div>
+                <br>
+                <div class="input-group form-group-no-border">
+                      <input type="number" class="form-control" formControlName="precio" placeholder="Precio">
+                </div>
+            </div>
+        </div>
+        <div class="row centrar">
+            <p>Valor nutricional</p>
+        </div>
+
+                <input type="number" class="form-control inputtx" formControlName="grasa" placeholder="Grasa">
+
+                <input type="number" class="form-control inputtx" formControlName="azucar" placeholder="Azucar">
+
+                <input type="number" class="form-control inputtx" formControlName="sal" placeholder="Sal">
+
+                <input type="number" class="form-control inputtx" formControlName="proteina" placeholder="Proteina">
+
+
+    </div>
+    <div class="modal-footer centrar">
+        <button class="btn btn-danger btn-block" (click)="agregarProducto()" [disabled]="((!formularioProducto.valid) || (!imagenCargada))" style="background-color: #00824a; border-color: #00824a;">Modificar</button>
+    </div>
+</form>
+  </ng-template>
+
+  <ng-template #mostrarprod>
     <form [formGroup]="formularioProducto" >
     <div class="modal-header mhead" style="background-color: #009CDE;">
         <p class="heading lead">Producto nuevo</p>
@@ -116,4 +173,20 @@
 </form>
   </ng-template>
 
+  <ng-template #valn>
+    <div class="modal-header mhead" style="background-color: #009CDE;">
+        <p class="heading lead">Producto nuevo</p>
+    </div>
+    <div class="modal-body" style="text-align: center;">
+        <p><strong>Valor nutricional</strong></p>
+        <br>
+        <p>Azucar: </p>
+        <p>Grasa: </p>
+        <p>Sal: </p>
+        <p>Proteinas: </p>
+        <br>
+    </div>
+    <div class="modal-footer centrar">
+    </div>
+  </ng-template>
   
