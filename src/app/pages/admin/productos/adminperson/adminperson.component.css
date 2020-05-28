@@ -162,3 +162,12 @@
   color:#fff;
   background: rgb(8, 92, 128);
 }
+
+.sel{
+  background-color: #009CDE;
+  color: white;
+  text-align: center;
+}
+.sel:hover{
+  background-color: wheat;
+}
