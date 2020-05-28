@@ -8,43 +8,39 @@
                 <table class="container">
                     <thead>
                         <tr>
-                            <th ><h1>Adicion</h1></th>
+                            <th ><h1>Desayuno</h1></th>
                             <th ><h1>Precio</h1></th>
-                            <th ><h1>Valor nutricional</h1></th>
+                            <th ><h1>Productos</h1></th>
+                            <th ><h1>Agregados</h1></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td (click)="ver(prod)">
+                            <td (click)="ver(verdesay)">
                                 <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
                                 Google
                             </td>
-                            <td>9518</td>
-                            <td (click)="valnut(valn)">ver</td>
+                            <td>$9518</td>
+                            <td (click)="valnut(products)">Producto</td>
+                            <td (click)="valnut(agrg)">agregado</td>
                         </tr>
                         <tr>
-                            <td>
+                            <td (click)="ver(verdesay)">
                                 <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
                                 Google
                             </td>
-                            <td>9518</td>
-                            <td>6369</td>
+                            <td>$9518</td>
+                            <td (click)="valnut(products)">Producto</td>
+                            <td (click)="valnut(agrg)">agregado</td>
                         </tr>
                         <tr>
-                            <td>
+                            <td (click)="ver(verdesay)">
                                 <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
                                 Google
                             </td>
-                            <td>9518</td>
-                            <td>6369</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>9518</td>
-                            <td>6369</td>
+                            <td>$9518</td>
+                            <td (click)="valnut(products)">Producto</td>
+                            <td (click)="valnut(agrg)">agregado</td>
                         </tr>
                     </tbody>
                     </table>
@@ -53,14 +49,75 @@
         </div>
         <div class="row">
             <div class="col">
-                <button class="btn btn-danger" style="background-color: #6c4523; border-color: #6c4523;" (click)="ver(mimens)">Agregar</button>
+                <button class="btn btn-danger" style="background-color: #6c4523; border-color: #6c4523;" (click)="ver(mimens)">Nuevo desayuno</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-danger" style="background-color: #6c4523; border-color: #6c4523;" (click)="ver(agregarprod)">Agregar producto</button>
             </div>
         </div>
     </div>
     
 </div>
 
-<ng-template #mimens>
+  <ng-template #products>
+    <div class="modal-header mhead" style="background-color: #009CDE;">
+        <p class="heading lead">Productos</p>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col">
+                <table class="container">
+                    <thead>
+                        <tr>
+                            <th ><h1>Producto</h1></th>
+                            <th ><h1>Nombre</h1></th>
+                            <th ><h1>Precio</h1></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td (click)="ver(verdesay)">
+                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                                Google
+                            </td>
+                            <td>9518</td>
+                            <td>9518</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                                Google
+                            </td>
+                            <td>9518</td>
+                            <td>9518</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                                Google
+                            </td>
+                            <td>9518</td>
+                            <td>9518</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                                Google
+                            </td>
+                            <td>9518</td>
+                            <td>9518</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <br>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer centrar">
+</div>
+  </ng-template>
+
+  <ng-template #agregarprod>
     <div class="modal-header mhead" style="background-color: #009CDE;">
         <p class="heading lead">Producto nuevo</p>
     </div>
@@ -96,7 +153,7 @@
     </div>
   </ng-template>
 
-  <ng-template #prod>
+  <ng-template #verdesay>
     <div class="modal-header mhead" style="background-color: #009CDE;">
         <p class="heading lead">Titulo</p>
     </div>
@@ -128,9 +185,73 @@
         <input type="number" class="form-control inputtx" placeholder="Proteina">
     </div>
     <div class="modal-footer centrar">
-        <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Modificar</button>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Modificar</button>
+                <button class="btn btn-danger btn-block" style="background-color: #ff0000; border-color: #ff0000;">Eliminar</button>
+            </div>
+        </div>
     </div>
   </ng-template>
+
+  <ng-template #agrg>
+    <div class="modal-header mhead" style="background-color: #009CDE;">
+        <p class="heading lead">Productos</p>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col">
+                <table class="container">
+                    <thead>
+                        <tr>
+                            <th ><h1>Producto</h1></th>
+                            <th ><h1>Nombre</h1></th>
+                            <th ><h1>Precio</h1></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td (click)="ver(verdesay)">
+                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                                Google
+                            </td>
+                            <td>9518</td>
+                            <td>9518</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                                Google
+                            </td>
+                            <td>9518</td>
+                            <td>9518</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                                Google
+                            </td>
+                            <td>9518</td>
+                            <td>9518</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                                Google
+                            </td>
+                            <td>9518</td>
+                            <td>9518</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <br>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer centrar">
+</div>
+  </ng-template>
+
 
   <ng-template #valn>
     <div class="modal-header mhead" style="background-color: #009CDE;">
@@ -146,5 +267,9 @@
         <br>
     </div>
     <div class="modal-footer centrar">
+        <div class="col">
+            <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Modificar</button>
+            <button class="btn btn-danger btn-block" style="background-color: #ff0000; border-color: #ff0000;">Eliminar</button>
+        </div>
     </div>
   </ng-template>
