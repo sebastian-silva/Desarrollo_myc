@@ -1278,6 +1278,7 @@ pre.prettyprint {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #ffffff;
     -webkit-text-stroke: 2px #6c4523;
+    font-size: 700px;
 }
 
 .btn-fix {
@@ -1310,4 +1311,9 @@ pre.prettyprint {
         color:#fff;
         text-decoration:none;
         padding:5px 5px 5px 0;
+      }
+
+
+      .tama{
+          font-size: 100px;
       }

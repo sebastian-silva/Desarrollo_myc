@@ -13,7 +13,7 @@ import { OfertasComponent } from './pages/inicio/ofertas/ofertas.component';
 import { MenuComponent } from './pages/inicio/menu/menu.component';
 import { LoginComponent } from './pages/login/login.component';
 import { EntradaComponent } from './pages/inicio/entrada/entrada.component';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
@@ -31,7 +31,7 @@ import { ProdsComponent } from './pages/admin/productos/prods/prods.component';
 import { AdminadiccComponent } from './pages/admin/productos/adminadicc/adminadicc.component';
 import { AdmindesayComponent } from './pages/admin/productos/admindesay/admindesay.component';
 import { UploadComponent } from './pages/upload/upload.component';
-
+import { AdminpersonComponent } from './pages/admin/productos/adminperson/adminperson.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +60,8 @@ import { UploadComponent } from './pages/upload/upload.component';
     ProdsComponent,
     AdminadiccComponent,
     AdmindesayComponent,
-    UploadComponent
+    UploadComponent,
+    AdminpersonComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +70,7 @@ import { UploadComponent } from './pages/upload/upload.component';
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
