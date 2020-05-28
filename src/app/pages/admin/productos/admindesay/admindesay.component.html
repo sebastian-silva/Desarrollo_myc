@@ -1,24 +1,150 @@
-<div class="page-header section-dark" style="background-image: url('assets/img/login-image.jpg')">
-    <div class="filter"></div>
-    <div class="content-center">
-        <div class="container">
-            <div class="title-brand">
-                <h1 class="presentation-title">Administra tus desayunos</h1>
-                <h4></h4>
+<div class="page-header" style="background-image: url('assets/img/login-image.jpg')">
+    <div class="container" style="margin-top: 100px;">
+        <div class="title">
+            <h1 style="color: white;">Desayunos</h1>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="container">
+                    <thead>
+                        <tr>
+                            <th ><h1>Adicion</h1></th>
+                            <th ><h1>Precio</h1></th>
+                            <th ><h1>Valor nutricional</h1></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td (click)="ver(prod)">
+                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                                Google
+                            </td>
+                            <td>9518</td>
+                            <td (click)="valnut(valn)">ver</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                                Google
+                            </td>
+                            <td>9518</td>
+                            <td>6369</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                                Google
+                            </td>
+                            <td>9518</td>
+                            <td>6369</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                                Google
+                            </td>
+                            <td>9518</td>
+                            <td>6369</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <br>
             </div>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col">
-                    <button class="btn btn-danger btn-block btn-round" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
-                </div>
-                <div class="col">
-                    <button class="btn btn-danger btn-block btn-round" style="background-color: #00824a; border-color: #00824a;">Modificar</button>
-                </div>
-                <div class="col">
-                    <button class="btn btn-danger btn-block btn-round" style="background-color: #00824a; border-color: #00824a;">Eliminar</button>
-                </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-danger" style="background-color: #6c4523; border-color: #6c4523;" (click)="ver(mimens)">Agregar</button>
             </div>
         </div>
     </div>
+    
 </div>
+
+<ng-template #mimens>
+    <div class="modal-header mhead" style="background-color: #009CDE;">
+        <p class="heading lead">Producto nuevo</p>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-auto">
+                <div class="card imagenmed" style="background-color: rgba(114, 114, 114, 0);">
+                    <a class="btn btn-fix text-left" >
+                      <img class="card-img-top img-fluid rounded" src="assets/img/signo.png" alt="Card image cap" style="background-color: white;">
+                    </a> 
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group form-group-no-border">
+                      <input type="text" class="form-control" placeholder="Nombre">
+                </div>
+                <br>
+                <div class="input-group form-group-no-border">
+                      <input type="text" class="form-control" placeholder="Precio">
+                </div>
+            </div>
+        </div>
+        <div class="row centrar">
+            <p>Valor nutricional</p>
+        </div>
+        <input type="number" class="form-control inputtx" placeholder="Grasa">
+        <input type="number" class="form-control inputtx" placeholder="Azucar">
+        <input type="number" class="form-control inputtx" placeholder="Sal">
+        <input type="number" class="form-control inputtx" placeholder="Proteina">
+    </div>
+    <div class="modal-footer centrar">
+        <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
+    </div>
+  </ng-template>
+
+  <ng-template #prod>
+    <div class="modal-header mhead" style="background-color: #009CDE;">
+        <p class="heading lead">Titulo</p>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-auto">
+                <div class="card imagenmed" style="background-color: rgba(114, 114, 114, 0);">
+                    <a class="btn btn-fix text-left" >
+                      <img class="card-img-top img-fluid rounded" src="assets/img/signo.png" alt="Card image cap" style="background-color: white;">
+                    </a> 
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group form-group-no-border">
+                      <input type="text" class="form-control" placeholder="Nombre" readonly>
+                </div>
+                <br>
+                <div class="input-group form-group-no-border">
+                      <input type="text" class="form-control" placeholder="Precio">
+                </div>
+            </div>
+        </div>
+        <div class="row centrar">
+            <p>Valor nutricional</p>
+        </div>
+        <input type="number" class="form-control inputtx" placeholder="Grasa">
+        <input type="number" class="form-control inputtx" placeholder="Azucar">
+        <input type="number" class="form-control inputtx" placeholder="Sal">
+        <input type="number" class="form-control inputtx" placeholder="Proteina">
+    </div>
+    <div class="modal-footer centrar">
+        <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Modificar</button>
+    </div>
+  </ng-template>
+
+  <ng-template #valn>
+    <div class="modal-header mhead" style="background-color: #009CDE;">
+        <p class="heading lead">Producto nuevo</p>
+    </div>
+    <div class="modal-body" style="text-align: center;">
+        <p><strong>Valor nutricional</strong></p>
+        <br>
+        <p>Azucar: </p>
+        <p>Grasa: </p>
+        <p>Sal: </p>
+        <p>Proteinas: </p>
+        <br>
+    </div>
+    <div class="modal-footer centrar">
+    </div>
+  </ng-template>

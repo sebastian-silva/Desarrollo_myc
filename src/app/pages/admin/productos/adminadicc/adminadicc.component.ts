@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-adminadicc',
@@ -7,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminadiccComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
   }
 
-}
+  ver(modal){
+    this.modalService.open(modal, { centered: true });
+  }
 
+  valnut(modal){
+    this.modalService.open(modal, { centered: true });
+  }
+
+}
