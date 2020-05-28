@@ -26,26 +26,17 @@
                             <td (click)="valnut(agrg)">agregado</td>
                             <td (click)="valnut(valn)">ver</td>
                         </tr>
-                        <tr>
-                            <td (click)="ver(verdesay)">
+                        <tr *ngFor="let desayuno of todosDesayunos">
+                            <td (click)="verCambio(mimens, desayuno)">
                                 <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
+                                {{desayuno.nombre}}
                             </td>
-                            <td>$9518</td>
-                            <td (click)="valnut(products)">Producto</td>
-                            <td (click)="valnut(agrg)">agregado</td>
-                            <td (click)="valnut(valn)">ver</td>
+                            <td>$ {{desayuno.precio}}</td>
+                            <td (click)="agregarP(products,desayuno)">Producto</td>
+                            <td (click)="agregarOtroP(agrg,desayuno)">agregado</td>
+                            <td (click)="valnut(valn)">ver</td>                    
                         </tr>
-                        <tr>
-                            <td (click)="ver(verdesay)">
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>$9518</td>
-                            <td (click)="valnut(products)">Producto</td>
-                            <td (click)="valnut(agrg)">agregado</td>
-                            <td (click)="valnut(valn)">ver</td>
-                        </tr>
+
                     </tbody>
                     </table>
                     <br>
@@ -119,12 +110,13 @@
     </div>
     <div class="modal-footer centrar">
         <div class="row">
-                <button class="btn btn-danger btn-block" (click)="ver(agpro)" style="background-color: #009CDE; border-color: #009CDE;">Agregar</button>
+                <button class="btn btn-danger btn-block" (click)="tablaProductos(agpro)" style="background-color: #009CDE; border-color: #009CDE;">Agregar</button>
         </div>
     </div>
   </ng-template>
 
   <ng-template #agregarprod>
+    <form [formGroup]="formularioOtroP" >
     <div class="modal-header mhead" style="background-color: #009CDE;">
         <p class="heading lead">Producto nuevo</p>
     </div>
@@ -132,18 +124,19 @@
         <div class="row">
             <div class="col">
                 <div class="input-group form-group-no-border">
-                      <input type="text" class="form-control" placeholder="Nombre">
+                      <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
                 </div>
                 <br>
                 <div class="input-group form-group-no-border">
-                      <input type="text" class="form-control" placeholder="Precio">
+                      <input type="text" class="form-control" formControlName="precio" placeholder="Precio">
                 </div>
             </div>
         </div>
     </div>
     <div class="modal-footer centrar">
-        <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
+        <button class="btn btn-danger btn-block" (click)="agregarOtroProducto()" [disabled]="(!formularioOtroP.valid)" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
     </div>
+    </form>
   </ng-template>
 
   <ng-template #verdesay>
@@ -247,7 +240,7 @@
     </div>
     <div class="modal-footer centrar">
         <div class="row">
-                <button (click)="ver(agagr)" class="btn btn-danger btn-block" style="background-color: #009CDE; border-color: #009CDE;">Agregar</button>
+                <button (click)="tablaOtrosProductos(agagr)" class="btn btn-danger btn-block" style="background-color: #009CDE; border-color: #009CDE;">Agregar</button>
         </div>
     </div>
   </ng-template>
@@ -270,6 +263,7 @@
   </ng-template>
 
   <ng-template #nuevodesay>
+    <form [formGroup]="formularioDesayuno" >
     <div class="modal-header mhead" style="background-color: #009CDE;">
         <p class="heading lead">Titulo</p>
     </div>
@@ -291,27 +285,28 @@
             </div>
             <div class="col">
                 <div class="input-group form-group-no-border">
-                      <input type="text" class="form-control" placeholder="Nombre">
+                      <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
                 </div>
                 <br>
                 <div class="input-group form-group-no-border">
-                      <input type="text" class="form-control" placeholder="Precio">
+                      <input type="text" class="form-control" formControlName="precio" placeholder="Precio">
                 </div>
             </div>
         </div>
         <div class="row centrar">
             <p>Valor nutricional</p>
         </div>
-        <input type="number" class="form-control inputtx" placeholder="Grasa">
-        <input type="number" class="form-control inputtx" placeholder="Azucar">
-        <input type="number" class="form-control inputtx" placeholder="Sal">
-        <input type="number" class="form-control inputtx" placeholder="Proteina">
+        <input type="number" class="form-control inputtx" formControlName="grasa" placeholder="Grasa">
+        <input type="number" class="form-control inputtx" formControlName="azucar" placeholder="Azucar">
+        <input type="number" class="form-control inputtx" formControlName="sal" placeholder="Sal">
+        <input type="number" class="form-control inputtx" formControlName="proteina" placeholder="Proteina">
     </div>
     <div class="modal-footer centrar">
         <div class="row">
-                <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
+                <button class="btn btn-danger btn-block"  [disabled]="((!formularioDesayuno.valid) || (!imagenCargada))"  style="background-color: #00824a; border-color: #00824a;">Agregar</button>
         </div>
     </div>
+</form>
   </ng-template>
 
   <ng-template #agpro>
@@ -322,27 +317,16 @@
         <br>
         <br>
         <div class="row centrar" >
-            <select class="sel" id="mounth" style="background-color: #009CDE; color: rgb(255, 255, 255);">
+            <select class="sel" id="producto" [(ngModel)]="productoSeleccionado" style="background-color: #009CDE; color: rgb(255, 255, 255);">
                 <option value="hide">Productos</option>
-                <option value="january" rel="icon-temperature">January</option>
-                <option value="february">February</option>
-                <option value="march">March</option>
-                <option value="april">April</option>
-                <option value="may">May</option>
-                <option value="june">June</option>
-                <option value="july">July</option>
-                <option value="august">August</option>
-                <option value="september">September</option>
-                <option value="october">October</option>
-                <option value="november">November</option>
-                <option value="december">December</option>
+                <option *ngFor="let producto of todosProductos"  value="producto" [ngValue]="producto">{{producto.nombre}}</option>
             </select> 
         </div>
         <br>
         <br>
     </div>
     <div class="modal-footer centrar">
-        <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
+        <button class="btn btn-danger btn-block"(click)="verPro()"   style="background-color: #00824a; border-color: #00824a;">Agregar</button>
     </div>
   </ng-template>
 
@@ -354,17 +338,15 @@
         <br>
         <br>
         <div class="row centrar" >
-            <select class="sel" id="mounth" style="background-color: #009CDE; color: rgb(255, 255, 255);">
+            <select class="sel" id="mounth" [(ngModel)]="otroProSeleccionado" style="background-color: #009CDE; color: rgb(255, 255, 255);">
                 <option value="hide">Productos</option>
-                <option value="january" rel="icon-temperature">Jugo</option>
-                <option value="february">Queso</option>
-                <option value="march">Cafe</option>
+                <option *ngFor="let otroP of todosOtrosProductos" [ngValue]="otroP" value="{{otroP.nombre}}">{{otroP.nombre}}</option>
             </select> 
         </div>
         <br>
         <br>
     </div>
     <div class="modal-footer centrar">
-        <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
+        <button class="btn btn-danger btn-block"(click)="verOtroP()"  style="background-color: #00824a; border-color: #00824a;">Agregar</button>
     </div>
   </ng-template>
