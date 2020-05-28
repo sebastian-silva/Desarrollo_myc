@@ -30,8 +30,10 @@ import { AdminprodComponent } from './pages/admin/productos/adminprod/adminprod.
 import { ProdsComponent } from './pages/admin/productos/prods/prods.component';
 import { AdminadiccComponent } from './pages/admin/productos/adminadicc/adminadicc.component';
 import { AdmindesayComponent } from './pages/admin/productos/admindesay/admindesay.component';
-import { UploadComponent } from './pages/upload/upload.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
 import { AdminpersonComponent } from './pages/admin/productos/adminperson/adminperson.component';
+import { ProbandopagoComponent } from './pages/probandopago/probandopago.component';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,9 @@ import { AdminpersonComponent } from './pages/admin/productos/adminperson/adminp
     ProdsComponent,
     AdminadiccComponent,
     AdmindesayComponent,
-    UploadComponent,
+    AdminpersonComponent,
+    ProbandopagoComponent,
+    CarritoComponent,
     AdminpersonComponent
   ],
   imports: [
@@ -70,7 +74,8 @@ import { AdminpersonComponent } from './pages/admin/productos/adminperson/adminp
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPayPalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

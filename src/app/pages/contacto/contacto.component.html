@@ -1,10 +1,11 @@
 <div class="wrapper">
-    <div class="page-header" style="background:fixed url('./assets/img/bread.jpg');"> 
-        <div class="container form-top">
+    <div class="page-header" style="background:fixed url('./assets/img/bg2.jpg');"> 
+        <div class="container centrar">
             <div class="row">
-                <div class="col-md-10 col-md-offset-3 col-sm-20 col-xs-12">
-                    <div class="panel panel-danger">
-                        <div class="panel-body">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-xl">
+                      <div class="card card-register" style="background-color: rgb(240, 240, 240); color: #00824a;">
+                          <h3 class="title" style="color: #00824a;">Contactanos</h3>
 
                             <form [formGroup]="formularioCorreo" id="reused_form" style="margin-top: 80px">
                                 <div class="form-group">
@@ -20,11 +21,11 @@
                                     <input type="email" name="email" class="form-control" formControlName="correo" placeholder="Ingrese su Email">
                                 </div>
                                 <div class="form-group">
-                                    <label><i class="fa fa-comment" aria-hidden="true"></i> Mensaje Final</label>
+                                    <label><i class="fa fa-comment" aria-hidden="true"></i> Mensaje</label>
                                     <textarea rows="3" name="message" class="form-control" formControlName="cuerpo" placeholder="Escriba su mensaje"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <button (click)="enviarCorreo()" [disabled]="!formularioCorreo.valid" class="btn btn-raised btn-block btn-danger">Enviar</button>
+                                    <button (click)="enviarCorreo()" [disabled]="!formularioCorreo.valid" class="btn btn-raised btn-block btn-success">Enviar</button>
                                 </div>
                             </form>
                             <p>{{mensaje}}</p>
@@ -43,5 +44,4 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
