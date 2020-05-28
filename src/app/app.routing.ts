@@ -11,6 +11,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { AdminComponent } from './pages/admin/admin.component';
+import { CargarImgComponent } from './pages/cargar-img/cargar-img.component';
 import { DisenosComponent } from './pages/admin/disenos/disenos.component';
 import { PedidosComponent } from './pages/admin/pedidos/pedidos.component';
 import { ProductosComponent } from './pages/admin/productos/productos.component';
@@ -28,6 +29,7 @@ const routes: Routes =[
     { path: 'nosotros', component: NosotrosComponent },
     { path: 'contacto', component: ContactoComponent },
     { path: 'admin', component: AdminComponent },
+    { path: 'cargar', component: CargarImgComponent },
     { path: 'disenos', component: DisenosComponent},
     { path: 'pedidos', component: PedidosComponent},
     { path: 'productos', component: ProductosComponent},

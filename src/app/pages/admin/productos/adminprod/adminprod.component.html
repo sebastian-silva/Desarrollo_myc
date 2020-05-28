@@ -1,24 +1,102 @@
 <div class="page-header section-dark" style="background-image: url('assets/img/login-image.jpg')">
-    <div class="filter"></div>
-    <div class="content-center">
-        <div class="container">
-            <div class="title-brand">
-                <h1 class="presentation-title">Administra tus productos</h1>
-                <h4></h4>
+    <table class="container table-sm" style="margin-top: 80px;" >
+        <thead>
+            <tr>
+                <th ><h1>Producto</h1></th>
+                <th ><h1>Precio</h1></th>
+                <th ><h1>Valor nutricional</h1></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td routerLink="/home">
+                    <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                    Google
+                </td>
+                <td>9518</td>
+                <td>ver</td>
+            </tr>
+            <tr>
+                <td routerLink="/home">
+                    <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                    Google
+                </td>
+                <td>9518</td>
+                <td>6369</td>
+            </tr>
+            <tr>
+                <td routerLink="/home">
+                    <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                    Google
+                </td>
+                <td>9518</td>
+                <td>6369</td>
+            </tr>
+            <tr>
+                <td routerLink="/home">
+                    <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
+                    Google
+                </td>
+                <td>9518</td>
+                <td>6369</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td (click)="ver(mimens)">
+                    Nuevo
+                </td>
+                <td></td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<ng-template #mimens>
+    <form [formGroup]="formularioProducto" >
+    <div class="modal-header mhead" style="background-color: #009CDE;">
+        <p class="heading lead">Producto nuevo</p>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-auto">
+                <div class="card imagenmed" style="background-color: rgba(114, 114, 114, 0);">
+                    <a class="btn btn-fix text-left" >
+                      <img class="card-img-top img-fluid rounded" [src]="imageShow" alt="Card image cap" style="background-color: white;">
+                      <input type="file" (change)="cargarImg($event)">
+                    </a> 
+                </div>
             </div>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col">
-                    <button class="btn btn-danger btn-block btn-round" style="background-color: #00824a; border-color: #00824a;">Agregar producto</button>
+            
+            <div class="col">
+                <div class="input-group form-group-no-border">
+                      <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre">
                 </div>
-                <div class="col">
-                    <button class="btn btn-danger btn-block btn-round" style="background-color: #00824a; border-color: #00824a;">Modificar producto</button>
-                </div>
-                <div class="col">
-                    <button class="btn btn-danger btn-block btn-round" style="background-color: #00824a; border-color: #00824a;">Eliminar producto</button>
+                <br>
+                <div class="input-group form-group-no-border">
+                      <input type="number" class="form-control" formControlName="precio" placeholder="Precio">
                 </div>
             </div>
         </div>
+        <div class="row centrar">
+            <p>Valor nutricional</p>
+        </div>
+
+                <input type="number" class="form-control inputtx" formControlName="grasa" placeholder="Grasa">
+
+                <input type="number" class="form-control inputtx" formControlName="azucar" placeholder="Azucar">
+
+                <input type="number" class="form-control inputtx" formControlName="sal" placeholder="Sal">
+
+                <input type="number" class="form-control inputtx" formControlName="proteina"laceholder="Proteina">
+
+
     </div>
-</div>
+    <div class="modal-footer centrar">
+        <button class="btn btn-danger btn-block" (click)="agregarProducto()" [disabled]="((!formularioProducto.valid) || (!imagenCargada))" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
+    </div>
+</form>
+  </ng-template>
+
+  

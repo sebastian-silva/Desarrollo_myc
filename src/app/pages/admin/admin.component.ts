@@ -13,7 +13,7 @@ export class AdminComponent implements OnInit {
   ngOnInit(): void { 
   }
 
-  public esAdmin() {
+  esAdmin() {
     if(this.usuarioSer.usuarioActivo.idUsuario==1) {
         return true;
     }

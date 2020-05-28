@@ -20,6 +20,7 @@ import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { ComponentsComponent } from './pages/components/components.component';
 import { AdminComponent } from './pages/admin/admin.component';
+import { CargarImgComponent } from './pages/cargar-img/cargar-img.component';
 import { ProductosComponent } from './pages/admin/productos/productos.component';
 import { PedidosComponent } from './pages/admin/pedidos/pedidos.component';
 import { DisenosComponent } from './pages/admin/disenos/disenos.component';
@@ -29,6 +30,7 @@ import { AdminprodComponent } from './pages/admin/productos/adminprod/adminprod.
 import { ProdsComponent } from './pages/admin/productos/prods/prods.component';
 import { AdminadiccComponent } from './pages/admin/productos/adminadicc/adminadicc.component';
 import { AdmindesayComponent } from './pages/admin/productos/admindesay/admindesay.component';
+import { UploadComponent } from './pages/upload/upload.component';
 
 
 @NgModule({
@@ -48,6 +50,7 @@ import { AdmindesayComponent } from './pages/admin/productos/admindesay/admindes
     ContactoComponent,
     ComponentsComponent,
     AdminComponent,
+    CargarImgComponent,
     ProductosComponent,
     PedidosComponent,
     DisenosComponent,
@@ -56,7 +59,8 @@ import { AdmindesayComponent } from './pages/admin/productos/admindesay/admindes
     AdminprodComponent,
     ProdsComponent,
     AdminadiccComponent,
-    AdmindesayComponent
+    AdmindesayComponent,
+    UploadComponent
   ],
   imports: [
     BrowserModule,
