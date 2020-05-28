@@ -163,22 +163,11 @@
   background: rgb(8, 92, 128);
 }
 
-.ratio {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  height: 0;
-  padding-bottom: 100%;
-  position: relative;
-  width: 100%;
+.sel{
+  background-color: #009CDE;
+  color: white;
+  text-align: center;
 }
-.img-responsive {
-  display: block;
-  height: auto;
-  max-width: 100%;
-}
-.cont{
-  width: 100px;
-  height: 100px;
+.sel:hover{
+  background-color: wheat;
 }

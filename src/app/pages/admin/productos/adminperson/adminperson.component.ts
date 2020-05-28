@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-adminadicc',
-  templateUrl: './adminadicc.component.html',
-  styleUrls: ['./adminadicc.component.css']
+  selector: 'app-adminperson',
+  templateUrl: './adminperson.component.html',
+  styleUrls: ['./adminperson.component.css']
 })
-export class AdminadiccComponent implements OnInit {
+export class AdminpersonComponent implements OnInit {
 
   constructor(private modalService: NgbModal) { }
 
@@ -20,5 +20,4 @@ export class AdminadiccComponent implements OnInit {
   valnut(modal){
     this.modalService.open(modal, { centered: true });
   }
-
 }
