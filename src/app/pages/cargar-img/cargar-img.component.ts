@@ -16,6 +16,8 @@ export class CargarImgComponent {
   imageName: any;
   imageShow: any;
   public imagePath;
+  numero: Number;
+  cambio: any;
   //Gets called when the user selects an image
 
   onFileChanged(event) {
@@ -36,9 +38,10 @@ export class CargarImgComponent {
       console.log(reader.result)
     }
   }
+
+
   //Gets called when the user clicks on submit to upload the image
   onUpload() {
-    console.log(this.selectedFile);
     
     //FormData API provides methods and properties to allow us easily prepare form data to be sent with POST HTTP requests.
     const uploadImageData = new FormData();
@@ -46,9 +49,12 @@ export class CargarImgComponent {
   
     //Make a call to the Spring Boot Application to save the image
     this.httpClient.post('http://localhost:8080/image/upload', uploadImageData, { observe: 'response' })
-      .subscribe((response) => {
-        if (response.status === 200) {
+      .subscribe((id) => {
+        if (id.body !=0) {
           this.message = 'Image uploaded successfully';
+          this.cambio= id.body;
+          this.numero =this.cambio; 
+          console.log(this.numero)
         } else {
           this.message = 'Image not uploaded successfully';
         }
