@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators,FormsModule  } from '@angular/forms';
 import { Producto } from 'app/Modelo/Producto';
 import { ProductoService } from 'app/servicios/producto.service';
 import { ModeloImagen } from 'app/Modelo/ModeloImagen';
@@ -13,15 +13,26 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AdminprodComponent implements OnInit {
   formularioProducto: FormGroup;
+  formularioEditProducto: FormGroup;
   productoTempo: Producto =new Producto();
   message: string;
   selectedFile: File;
   public imagePath;
   imageShow: any;
   imagenCargada :Boolean;
-  cambio: any
-  constructor(private modalService: NgbModal, private formulario:FormBuilder, public productoSer:ProductoService,private httpClient: HttpClient ) {}
+  cambio: any;
+  todosProductos:Array<Producto>;
+  grasa: Number;
+  azucar: Number;
+  sal : Number;
+  proteina: Number;
+  productoEdit: Producto;
+
+  constructor(private modalService: NgbModal, private formularioCambio:FormBuilder, private formulario:FormBuilder, public productoSer:ProductoService,private httpClient: HttpClient ) {}
   ngOnInit(): void {
+    this.productoSer.ObtenerProductos().subscribe((productos)=>{
+      this.todosProductos=productos;
+    })
     this.imageShow="assets/img/signo.png";
     this.imagenCargada=false;
     this.formularioProducto=this.formulario.group({
@@ -32,11 +43,30 @@ export class AdminprodComponent implements OnInit {
       sal:['',Validators.required],
       proteina:['',Validators.required]
     });
+
+    this.formularioEditProducto=this.formularioCambio.group({
+      nombre:['',Validators.required],
+      precio:['',Validators.required],
+      grasa:['',Validators.required],
+      azucar:['',Validators.required],
+      sal:['',Validators.required],
+      proteina:['',Validators.required]
+    });
   }
 
-  ver(modal){
-    this.modalService.open(modal, { centered: true });
+  ver(modal,Egrasa,Eazucar,Esal,Eproteina){
+    this.grasa=Egrasa;
+    this.azucar=Eazucar;
+    this.sal=Esal;
+    this.proteina=Eproteina;
+    this.modalService.open(modal, { centered: true },);
   }
+
+  verCambio(modal,producto){
+    this.modalService.open(modal, { centered: true },);
+    this.productoEdit=producto;
+  }
+
 
   cargarImg(event){
     console.log((!this.formularioProducto.valid) && (!this.imagenCargada))
@@ -87,6 +117,17 @@ export class AdminprodComponent implements OnInit {
       }
       )
 
+    }
+  }
+
+  editarProducto(){
+    if(this.formularioEditProducto.valid){
+      var id =this.productoEdit.idProducto
+      this.productoEdit=this.formularioEditProducto.value as Producto
+      this.productoEdit.idProducto=id;
+      this.productoSer.editarProducto(this.productoEdit).subscribe((productoR)=>{
+        console.log("Se logro editar")
+      })      
     }
   }
 
