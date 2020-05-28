@@ -222,13 +222,15 @@
 .name {
     font-size: 25px;
     font-weight: 400;
-    margin: 0;
+    margin-top: 30px;
+    text-align: center;
   }
 
 .price {
     font-family: monospace;
-    margin-top: auto;
+    margin-top: 35px;
     font-size: 25px;
+    text-align: center;
   }
 
   @media ( min-width: 50rem ) {
@@ -248,13 +250,31 @@
 .quantity {
     font-family: monospace;
     font-size: 25px;
+    text-align: center;
+    margin-top: 30px;
   }
 
 .desc {
     text-align: center;
     font-size: 16px;
+    margin-top: 25px;
+    margin-left: 35px;
 }
 .card {
   margin-top: 70px;
   background-color: beige;
+}
+
+.imagen {
+  border-radius: 8px;
+}
+
+.input-group{
+  width: 250px;
+  margin: auto;
+  background-color: transparent;
+}
+
+.glyphicon {
+    color: quantity-btn-color;
 }
