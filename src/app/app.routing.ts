@@ -7,6 +7,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { LoginComponent } from './pages/login/login.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { ProductoComponent } from './pages/producto/producto.component';
+import { DesayunoComponent } from './pages/desayuno/desayuno.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
@@ -24,6 +25,7 @@ const routes: Routes =[
     { path: 'home', component: InicioComponent },
     { path: 'tienda', component: TiendaComponent },
     { path: 'producto', component: ProductoComponent },
+    { path: 'desayuno', component: DesayunoComponent },
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
     { path: 'nosotros', component: NosotrosComponent },
