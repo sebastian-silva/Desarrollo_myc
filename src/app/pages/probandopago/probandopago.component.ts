@@ -20,7 +20,7 @@ export class ProbandopagoComponent implements OnInit {
   initConfig() {
     this.payPalConfig = {
     currency: 'MXN',
-    clientId: 'ASiNzQ1WmiOYpTOdrmyBskYW6_lOid09x-oPEN0ryIqQnx3KRZ4P8Xx3A8QNwUrUQaSv9J4mkjw4NmXM',
+    clientId: 'AXUedd2PJWBi_ijYTZKpPTJMM5DNKsepMpeSmre37kMZXCfUL176UTKR9UuJhZaK1jErmJW83uPkSm0p',
     
     createOrderOnClient: (data) => <ICreateOrderRequest>{
     intent: 'CAPTURE',
