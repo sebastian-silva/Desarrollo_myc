@@ -14,6 +14,7 @@ import { ProductoDesa } from 'app/Modelo/ProductoDesa';
 import { ProdesaService } from 'app/servicios/prodesa.service';
 import { OtroDesayuno } from 'app/Modelo/OtroDesayuno';
 import { OtrodesaService } from 'app/servicios/otrodesa.service';
+import { UsuarioService } from '../../../../servicios/usuario.service';
 
 interface Food {
   value: string;
@@ -48,7 +49,7 @@ export class AdmindesayComponent implements OnInit{
   mensajeAgregar: String="";
   productoDesaTempo: ProductoDesa= new ProductoDesa();
   otroProDesaTempo: OtroDesayuno= new OtroDesayuno();
-  constructor(private modalService: NgbModal,private formularioAgregar:FormBuilder,private formularioOtro:FormBuilder,private httpClient: HttpClient, public desaSer:DesayunoService, public otroPSer:OtrosProductosService,public producSer: ProductoService, public proDesaSer:ProdesaService, public otroDesaSer:OtrodesaService ) { }
+  constructor(private modalService: NgbModal,private formularioAgregar:FormBuilder,private formularioOtro:FormBuilder,private httpClient: HttpClient, public desaSer:DesayunoService, public otroPSer:OtrosProductosService,public producSer: ProductoService, public proDesaSer:ProdesaService, public otroDesaSer:OtrodesaService, public ususervice: UsuarioService ) { }
 
   ngOnInit(): void {
     this.imageShow="assets/img/signo.png";

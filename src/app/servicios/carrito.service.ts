@@ -6,10 +6,10 @@ import { ProducAdici } from '../Modelo/ProducAdici';
   providedIn: 'root'
 })
 export class CarritoService {
-  desayunos: Desayuno[];
+  desayunos: Array<Desayuno>;
 
-  productos: ProducAdici[];
-  constructor() { }
+  productos: Array<ProducAdici>;
+  constructor() { }1
 
   agregardesay(desa:Desayuno){
     this.desayunos.push(desa);

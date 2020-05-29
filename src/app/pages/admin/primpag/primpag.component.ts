@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from '../../../servicios/usuario.service';
 
 @Component({
   selector: 'app-primpag',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrimpagComponent implements OnInit {
 
-  constructor() { }
+  constructor(public ususervice: UsuarioService) { }
 
   ngOnInit(): void {
   }

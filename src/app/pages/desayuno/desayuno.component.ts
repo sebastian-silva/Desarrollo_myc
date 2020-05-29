@@ -10,6 +10,7 @@ import { Desayuno } from '../../Modelo/Desayuno';
 })
 export class DesayunoComponent implements OnInit {
 
+  lista:string[]=["hola","que","tal","estas"];
   constructor(private ruta: Router, public carservice: CarritoService) { }
 
   ngOnInit(): void {

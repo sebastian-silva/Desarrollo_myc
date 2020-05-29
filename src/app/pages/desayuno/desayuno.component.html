@@ -19,7 +19,7 @@
       <label class="control-label"><span>Combo A</span></label>
       <div class="controls">
         <select class="span11">
-          <option>Combo A</option>
+          <option *ngFor="let item of lista"> {{item}} </option>
         </select>
       </div>
       </div>

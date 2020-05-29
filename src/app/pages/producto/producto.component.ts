@@ -17,13 +17,10 @@ export class ProductoComponent implements OnInit {
   todosProductos:Array<Producto>;
   todosAdicciones: Array<Adicion>;
   todosProAdiccion: Array<ProducAdici>;
-<<<<<<< HEAD
   informacion:Array<String>;
+  sebas:Array<string>;
+  carlos: String[];
   constructor(private ruta: Router,public proAdiSer: ProdadicciService ,public productoSer: ProductoService,public adicionSer: AdicionService, public carservice: CarritoService ) { }
-=======
-  informacion:Array<string>;
-  constructor(private ruta: Router,public proAdiSer: ProdadicciService ,public productoSer: ProductoService,public adicionSer: AdicionService ) { }
->>>>>>> 6351af84ed6fd627db128beb20c5f06c809be119
 
   ngOnInit(): void {
     this.informacion=new Array;
@@ -37,14 +34,22 @@ export class ProductoComponent implements OnInit {
                 ProAditempo.idAdicion=adicciones[k].idAdicion;
                 ProAditempo.idProducto=productos[j].idProducto;
                  if((ProAditempo.idProducto==TodosProduAdi[i].idProducto) &&  (ProAditempo.idAdicion==TodosProduAdi[i].idAdicion) ){ 
-                   this.informacion.push(productos[j].nombre + " Con "+adicciones[k].nombre )
+                   this.informacion.push(productos[j].nombre + " Con "+adicciones[k].nombre );
                  }
               }
             }
           }
         })
       })
-      console.log(this.informacion)
+      this.sebas.push('mio');
+      this.sebas.push('perro');
+      this.sebas.push('hola');
+
+      this.carlos.push('hola');
+      this.carlos.push('hola');
+      this.carlos.push('hola');
+      this.carlos.push('hola');
+      console.log(this.informacion);
 
       let fruits: Array<string> = ['Apple', 'Orange', 'Banana']; 
 

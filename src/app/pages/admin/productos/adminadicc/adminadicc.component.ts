@@ -5,6 +5,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AdicionService } from 'app/servicios/adicion.service';
 import { HttpClient } from '@angular/common/http';
 import { ModeloImagen } from 'app/Modelo/ModeloImagen';
+import { UsuarioService } from '../../../../servicios/usuario.service';
 
 @Component({
   selector: 'app-adminadicc',
@@ -20,7 +21,7 @@ export class AdminadiccComponent implements OnInit {
   imageShow: any;
   imagenCargada :Boolean;
   cambio: any
-  constructor(private modalService: NgbModal,private formulario:FormBuilder, public adicionSer:AdicionService,private httpClient: HttpClient) { }
+  constructor(private modalService: NgbModal,private formulario:FormBuilder, public adicionSer:AdicionService,private httpClient: HttpClient,public ususervice: UsuarioService) { }
 
   ngOnInit(): void {
     this.imageShow="assets/img/signo.png";
