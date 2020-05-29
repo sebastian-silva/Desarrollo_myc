@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PagoService } from '../../servicios/pago.service';
+import {Md5} from 'ts-md5/dist/md5'
 
 @Component({
   selector: 'app-probandopago',
@@ -53,7 +54,7 @@ export class ProbandopagoComponent implements OnInit {
     this.buyerEmail = 'test@test.com';
     this.test = 1;
     this.description = 'Pan';
-    this.referenceCode = 'fact0020';
+    this.referenceCode = 'fact0022';
     this.amount = 20000;
     this.tax = 16806;
     this.taxReturnBase = 3193;
@@ -72,8 +73,8 @@ export class ProbandopagoComponent implements OnInit {
     if(this.transc === ''){
       
     }else{
-      // this.pagoServ.epayco.Pago = this.transc;
-      // this.ruta.navigateByUrl("respuestapag");
+       this.pagoServ.epayco.Pago = this.transc;
+       this.ruta.navigateByUrl("respuestapag");
     }
   }
 }

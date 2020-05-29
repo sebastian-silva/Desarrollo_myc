@@ -16,36 +16,42 @@ export class ProductoComponent implements OnInit {
   todosProductos:Array<Producto>;
   todosAdicciones: Array<Adicion>;
   todosProAdiccion: Array<ProducAdici>;
-  informacion:Array<String>;
+  informacion:Array<string>;
   constructor(private ruta: Router,public proAdiSer: ProdadicciService ,public productoSer: ProductoService,public adicionSer: AdicionService ) { }
 
   ngOnInit(): void {
-    this.productoSer.ObtenerProductos().subscribe((productos)=>{
-      this.todosProductos=productos;
-    })
-    this.adicionSer.ObtenerAdicciones().subscribe((adicciones)=>{
-      this.todosAdicciones=adicciones;
-    })
+    this.informacion=new Array;
     this.proAdiSer.ObtenerTodosProducAdi().subscribe((TodosProduAdi)=>{
-      this.todosProAdiccion=TodosProduAdi;
-      console.log(this.todosProductos);
-      console.log(this.todosAdicciones);
-    })  
+      this.productoSer.ObtenerProductos().subscribe((productos)=>{
+        this.adicionSer.ObtenerAdicciones().subscribe((adicciones)=>{
+          for(let i in TodosProduAdi ){
+            for(let j in productos){
+              for(let k in adicciones){
+                let  ProAditempo = new ProducAdici();
+                ProAditempo.idAdicion=adicciones[k].idAdicion;
+                ProAditempo.idProducto=productos[j].idProducto;
+                 if((ProAditempo.idProducto==TodosProduAdi[i].idProducto) &&  (ProAditempo.idAdicion==TodosProduAdi[i].idAdicion) ){ 
+                   this.informacion.push(productos[j].nombre + " Con "+adicciones[k].nombre )
+                 }
+              }
+            }
+          }
+        })
+      })
+      console.log(this.informacion)
 
-    for(let i in this.todosProAdiccion ){
-      for(let j in this.todosProductos){
-        for(let k in this.todosAdicciones){
-          let  ProAditempo = new ProducAdici();
-          ProAditempo.idAdicion=this.todosAdicciones[k].idAdicion;
-          ProAditempo.idProducto=this.todosProductos[j].idProducto;
-          console.log(ProAditempo)
-          console.log(this.todosProAdiccion[i])
-           if(ProAditempo==this.todosProAdiccion[i]){ 
-             console.log(this.todosAdicciones[k].nombre , this.todosProductos[j].nombre )
-           }
-        }
+      let fruits: Array<string> = ['Apple', 'Orange', 'Banana']; 
+
+for(var index in fruits)
+{ 
+    console.log(fruits[index]);  // output: Apple Orange Banana
+}
+
+      for(var index in this.informacion )
+      { 
+       console.log(this.informacion[index]);
       }
-    }
+
+    })  
   }
- 
 }
