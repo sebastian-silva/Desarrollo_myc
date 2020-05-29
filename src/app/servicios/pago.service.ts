@@ -8,7 +8,7 @@ export class PagoService {
     epayco: Epayco = new Epayco();
     constructor() { }
 
-    llenar(estado: String){
+    llenar(estado: string){
       this.epayco.Pago = estado;
     }
 

@@ -18,6 +18,5 @@ export class Datosfact{
         this.azucar=this.azucar,
         this.sal=this.sal,
         this.proteina=this.proteina
-        this.modeloImagen=this.modeloImagen
     }
 }
