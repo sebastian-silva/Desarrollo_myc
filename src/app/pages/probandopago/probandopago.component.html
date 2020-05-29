@@ -1,1 +1,16 @@
-<ngx-paypal [config]="payPalConfig"></ngx-paypal>
+<form ngNoForm method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/" target="">
+    <input name="merchantId"    type="hidden"  [value]="merchantId"   >
+    <input name="accountId"     type="hidden"  [value]="accountId" >
+    <input name="description"   type="hidden"  [value]="description"  >
+    <input name="referenceCode" type="hidden"  [value]="referenceCode" >
+    <input name="amount"        type="hidden"  [value]="amount"   >
+    <input name="tax"           type="hidden"  [value]="taxReturnBase"  >
+    <input name="taxReturnBase" type="hidden"  [value]="16806" >
+    <input name="currency"      type="hidden"  [value]="currency" >
+    <input name="signature"     type="hidden"  [value]="signature"  >
+    <input name="test"          type="hidden"  [value]="test" >
+    <input name="buyerEmail"    type="hidden"  [value]="buyerEmail" >
+    <input name="responseUrl"    type="hidden"  [value]="responseUrl" >
+    <input name="confirmationUrl"    type="hidden"  [value]="confirmationUrl" >
+    <input class="btn btn-primary btn-lg" style="background-color: #6c4523;" name="Submit" type="submit"  value="Enviar" >
+  </form>

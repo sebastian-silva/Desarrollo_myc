@@ -12,6 +12,6 @@ export class PagoService {
     constructor(private http: HttpClient) { }
 
     pagar(epayco: Epayco):Observable<Epayco>{
-      return this.http.post<Epayco>('https://secure.payco.co/restpagos/pagos/comercios.json', epayco);
+      return this.http.post<Epayco>('https://test.placetopay.com/redirection/api/session/', epayco);
     }
 }

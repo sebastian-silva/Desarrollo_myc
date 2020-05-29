@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
+import { Md5 } from 'ts-md5/dist/md5';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-probandopago',
@@ -8,73 +9,48 @@ import {IPayPalConfig, ICreateOrderRequest } from 'ngx-paypal';
 })
 
 export class ProbandopagoComponent implements OnInit {
-  public payPalConfig: IPayPalConfig;
-  
-  constructor() {
-    this.initConfig();
+  merchantId: Number;
+  accountId: Number;
+  description: String;
+  referenceCode: String;
+  amount: Number;
+  tax: Number;
+  taxReturnBase: Number;
+  currency: String;
+  signature: String;
+  test: Number;
+  buyerEmail: String;
+  responseUrl: String;
+  confirmationUrl: String;
+  mira: String;
+
+  constructor(private route: ActivatedRoute){
+    this.route.queryParams.subscribe(params => {
+      console.log(params.merchant_name);
+      console.log(params.merchantId);
+  });
+ 
   }
 
   ngOnInit(): void {
-      this.initConfig();
-  }
-  initConfig() {
-    this.payPalConfig = {
-    currency: 'MXN',
-    clientId: 'AXUedd2PJWBi_ijYTZKpPTJMM5DNKsepMpeSmre37kMZXCfUL176UTKR9UuJhZaK1jErmJW83uPkSm0p',
+    this.merchantId = 508029;
+    this.accountId = 512321;
+    this.currency = 'COP';
+    this.buyerEmail = 'test@test.com';
+    this.test = 1;
+    this.description = 'Pan';
+    this.referenceCode = 'fact003';
+    this.amount = 20000;
+    this.tax = 16806;
+    this.taxReturnBase = 3193;
+
+    const md5 = new Md5();
+    this.mira = '4Vj8eK4rloUd272L48hsrarnUA~'+this.merchantId+'~'+this.referenceCode+'~'+this.amount+'~'+this.currency;
+    this.signature = md5.appendStr(this.mira).end();
+    console.log(this.route.root)
     
-    createOrderOnClient: (data) => <ICreateOrderRequest>{
-    intent: 'CAPTURE',
-    purchase_units: [
-    {
-    amount: {
-    currency_code: 'MXN',
-    value: '0.02',
-    breakdown: {
-    item_total: {
-    currency_code: 'MXN',
-    value: '0.02'
-    }
-    }
-    },
-    items: [
-    {
-    name: 'Tokens',
-    quantity: '2',
-    category: 'DIGITAL_GOODS',
-    unit_amount: {
-    currency_code: 'MXN',
-    value: '0.01',
-    },
-    }
-    ]
-    }
-    ]
-    },
-    advanced: {
-    commit: 'true'
-    },
-    style: {
-    label: 'paypal',
-    layout: 'vertical'
-    },
-    onApprove: (data, actions) => {
-    console.log('onApprove - transaction was approved, but not authorized', data, actions);
-    actions.order.get().then(details => {
-    console.log('onApprove - you can get full order details inside onApprove: ', details);
-    });
-    },
-    onClientAuthorization: (data) => {
-    console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
-    },
-    onCancel: (data, actions) => {
-    console.log('OnCancel', data, actions);
-    },
-    onError: err => {
-    console.log('OnError', err);
-    },
-    onClick: (data, actions) => {
-    console.log('onClick', data, actions);
-    },
-    };
+    this.responseUrl = 'http://localhost:4200/#/carrito';
+    this.confirmationUrl = '//www.test.com/confirmation';
+    console.log(this.responseUrl);
   }
 }
