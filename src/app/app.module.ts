@@ -34,6 +34,7 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
 import { AdminpersonComponent } from './pages/admin/productos/adminperson/adminperson.component';
 import { ProbandopagoComponent } from './pages/probandopago/probandopago.component';
 import { NgxPayPalModule } from 'ngx-paypal';
+import { RespuestapagComponent } from './pages/respuestapag/respuestapag.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { NgxPayPalModule } from 'ngx-paypal';
     AdminpersonComponent,
     ProbandopagoComponent,
     CarritoComponent,
-    AdminpersonComponent
+    AdminpersonComponent,
+    RespuestapagComponent
   ],
   imports: [
     BrowserModule,

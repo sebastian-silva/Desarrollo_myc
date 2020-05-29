@@ -21,6 +21,7 @@ import { AdminadiccComponent } from './pages/admin/productos/adminadicc/adminadi
 import { AdmindesayComponent } from './pages/admin/productos/admindesay/admindesay.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { AdminpersonComponent } from './pages/admin/productos/adminperson/adminperson.component';
+import { RespuestapagComponent } from './pages/respuestapag/respuestapag.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -41,7 +42,8 @@ const routes: Routes =[
     { path: 'adminadicc', component: AdminadiccComponent},
     { path: 'admindesay', component: AdmindesayComponent},
     { path: 'carrito', component: CarritoComponent},
-    { path: 'adminperson', component: AdminpersonComponent}
+    { path: 'adminperson', component: AdminpersonComponent},
+    { path: 'respuestapag', component: RespuestapagComponent}
 ];
 
 @NgModule({

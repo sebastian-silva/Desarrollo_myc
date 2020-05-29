@@ -39,7 +39,7 @@ export class ProbandopagoComponent implements OnInit {
     this.buyerEmail = 'test@test.com';
     this.test = 1;
     this.description = 'Pan';
-    this.referenceCode = 'fact003';
+    this.referenceCode = 'fact005';
     this.amount = 20000;
     this.tax = 16806;
     this.taxReturnBase = 3193;
@@ -50,7 +50,7 @@ export class ProbandopagoComponent implements OnInit {
     console.log(this.route.root)
     
     this.responseUrl = 'http://localhost:4200/#/carrito';
-    this.confirmationUrl = '//www.test.com/confirmation';
+    this.confirmationUrl = 'http://localhost:4200/#/respuestapag';
     console.log(this.responseUrl);
   }
 }
