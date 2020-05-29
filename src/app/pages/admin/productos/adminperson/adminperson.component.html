@@ -12,7 +12,6 @@
                             <th ><h1>Precio</h1></th>
                             <th ><h1>Adiciones</h1></th>
                             <th ><h1>Añadir adicion</h1></th>
-                            <th ><h1>Valor nutricional</h1></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -24,40 +23,24 @@
                             <td>$9518</td>
                             <td (click)="valnut(products)">Producto</td>
                             <td (click)="valnut(valn)">+</td>
-                            <td (click)="valnut(valn)">ver</td>
                         </tr>
-                        <tr>
-                            <td (click)="ver(verdesay)">
+
+                        <tr *ngFor="let producto of todosProductos">
+                            <td (click)="ver(verdesay, producto)">
                                 <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
+                                {{producto.nombre}}
                             </td>
-                            <td>$9518</td>
-                            <td (click)="valnut(products)">Producto</td>
-                            <td (click)="valnut(valn)">+</td>
-                            <td (click)="valnut(valn)">ver</td>
+                            <td>$ {{producto.precio}}</td>
+                            <td (click)="valnut(products,producto)">Producto</td>
+                            <td (click)="verAdic(valn,producto)">+</td>
                         </tr>
-                        <tr>
-                            <td (click)="ver(verdesay)">
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>$9518</td>
-                            <td (click)="valnut(products)">Producto</td>
-                            <td (click)="valnut(valn)">+</td>
-                            <td (click)="valnut(valn)">ver</td>
-                        </tr>
+
                     </tbody>
                     </table>
                     <br>
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                <button class="btn btn-danger" style="background-color: #6c4523; border-color: #6c4523;" (click)="ver(nuevodesay)">Nuevo desayuno</button>
-            </div>
-            <div class="col">
-                <button class="btn btn-danger" style="background-color: #6c4523; border-color: #6c4523;" (click)="ver(agregarprod)">Agregar producto</button>
-            </div>
         </div>
     </div>
     
@@ -87,29 +70,15 @@
                             <td>9518</td>
                             <td>9518</td>
                         </tr>
-                        <tr>
-                            <td>
+
+                        <tr *ngFor="let adicion of adicionesSelec">
+                        <td >
                                 <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
+                                {{adicion.nombre}}
                             </td>
-                            <td>9518</td>
-                            <td>9518</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>9518</td>
-                            <td>9518</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>9518</td>
-                            <td>9518</td>
+                                <td>{{adicion.precio}}</td>
+                                <td>{{adicion.precio}}</td>
+                            
                         </tr>
                     </tbody>
                     </table>
@@ -179,7 +148,7 @@
         </div>
         <input type="number" class="form-control inputtx" placeholder="Grasa">
         <input type="number" class="form-control inputtx" placeholder="Azucar">
-        <input type="number" class="form-control inputtx" placeholder="Sal">
+        <input type="number" class="form-control inputtx" placeholder="Sal">    
         <input type="number" class="form-control inputtx" placeholder="Proteina">
     </div>
     <div class="modal-footer centrar">
@@ -253,18 +222,24 @@
 
   <ng-template #valn>
     <div class="modal-header mhead" style="background-color: #009CDE;">
-        <p class="heading lead">Producto nuevo</p>
+        <p class="heading lead">Agregar producto</p>
     </div>
-    <div class="modal-body" style="text-align: center;">
-        <p><strong>Valor nutricional</strong></p>
+    <div class="modal-body">
         <br>
-        <p>Azucar: </p>
-        <p>Grasa: </p>
-        <p>Sal: </p>
-        <p>Proteinas: </p>
+        <br>
+        <div class="row centrar" >
+            <select class="sel" id="mounth" [(ngModel)]="adicionSele" style="background-color: #009CDE; color: rgb(255, 255, 255);">
+                <option value="hide">Adiciones</option>
+                <option *ngFor="let adicion of todosAdicciones" [ngValue]="adicion" value="{{adicion.nombre}}">{{adicion.nombre}}</option>
+            </select> 
+            <p>{{mensajeAgregar}}</p>
+        </div>
+        <br>
         <br>
     </div>
     <div class="modal-footer centrar">
+        <button class="btn btn-danger btn-block"(click)="agregarAdi()"  style="background-color: #00824a; border-color: #00824a;">Agregar</button>
+        
     </div>
   </ng-template>
 

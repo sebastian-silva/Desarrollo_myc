@@ -14,4 +14,8 @@ export class AdicionService {
   guardarUsuario(adicion:Adicion):Observable<Adicion>{
     return this.http.post<Adicion>(this.ruta+'/adiciones',adicion)
   }
+
+  ObtenerAdicciones():Observable<Adicion[]>{
+    return this.http.get<Adicion[]>(this.ruta+'/adiciones')
+  }
 }
