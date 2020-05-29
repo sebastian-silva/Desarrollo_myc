@@ -5,14 +5,14 @@
         <div class="main" style="background: transparent;">
             <h1 style="color: #00843D;">Carrito de Compras</h1>
             <h2 class="sub-heading" style="color: #00843D;">Estos son los productos que elegiste</h2>
-        
+
             <section class="shopping-cart">
             <ol class="ui-list shopping-cart--list" id="shopping-cart--list">
 
                 <section class="cart">
                     <ul>
                       <li class="item">
-                        <img src="./assets/img/p1.jpg" style="width: 250px; height: 100px;"> 
+                        <img src="./assets/img/p1.jpg" style="width: 250px; height: 100px;">
                         <h3 class="name" style="color: #00843D;">Muffins</h3>
                         <p class="desc">Muffin Unidad, Adición Mora</p>
                               <!-- <div class="input-group">
@@ -24,7 +24,7 @@
                                     <button id="up" class="btn btn-default" onclick="up('10')"><span class="glyphicon glyphicon-plus"></span></button>
                                 </div>
                               </div> -->
-                        <button class="_btn _column product-subtract">-</button> <p class="quantity">1</p> <button class="_btn _column product-plus">+</button>
+                        <button (click)="showModal()" class="_btn _column product-subtract">-</button> <p class="quantity">1</p> <button class="_btn _column product-plus">+</button>
                         <p class="price">$5.000</p>
                       </li>
                       <li class="item">
@@ -43,7 +43,7 @@
                     </ul>
                   </section>
 
-        
+
                 <!-- <script id="shopping-cart--list-item-template" type="text/template">
                 <li class="_grid shopping-cart--list-item">
                     <div class="_column product-image">
@@ -52,7 +52,7 @@
                     <div class="_column product-info">
                     <h4 class="product-name">PAN</h4>
                     <p class="product-desc">Descripcion del producto</p>
-                    <div class="price product-single-price">$5.000</div>             BOTON PAGO PAY U 
+                    <div class="price product-single-price">$5.000</div>             BOTON PAGO PAY U
                     </div>
                     <div class="_column product-modifiers" data-product-price="{{=price}}">
                     <div class="_grid">
@@ -65,9 +65,9 @@
                     </div>
                 </li>
                 </script> -->
-        
+
             </ol>
-        
+
             <footer class="_grid cart-totals">
                 <div class="_column subtotal" id="subtotalCtr">
                 <div class="cart-totals-key">Subtotal</div>
@@ -88,8 +88,8 @@
                 <div class="_column checkout">
                   <app-probandopago></app-probandopago>
                 </div>
-                
-                
+
+
             </footer>
             <div class="_column total" id="Direccion">
               <div class="cart-totals-key" style="font-size: medium;">Dirección de Envio</div>
@@ -101,8 +101,8 @@
               </select>
             <input type="text" name="name" class="form-control" formControlName="dir" style="width: 200px; margin-top: 5px; font-family: sans-serif;" placeholder="Ingrese su Direccion">
             </div>
-              
-            
+
+
 
             <!-- <form ngNoForm method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
               <input name="merchantId"    type="hidden"  value="508029"   >
@@ -126,7 +126,7 @@
       </div>
     </div>
 
-    
 
-</div> 
+
+</div>
 </div>
