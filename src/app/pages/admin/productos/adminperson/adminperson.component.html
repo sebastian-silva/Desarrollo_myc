@@ -56,7 +56,7 @@
                 <table class="container">
                     <thead>
                         <tr>
-                            <th ><h1>Producto</h1></th>
+                            <th ><h1>Producto Base</h1></th>
                             <th ><h1>Nombre</h1></th>
                             <th ><h1>Precio</h1></th>
                         </tr>
@@ -87,29 +87,7 @@
         </div>
     </div>
     <div class="modal-footer centrar">
-        <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
-    </div>
-  </ng-template>
-
-  <ng-template #agregarprod>
-    <div class="modal-header mhead" style="background-color: #009CDE;">
-        <p class="heading lead">Producto nuevo</p>
-    </div>
-    <div class="modal-body">
-        <div class="row">
-            <div class="col">
-                <div class="input-group form-group-no-border">
-                      <input type="text" class="form-control" placeholder="Nombre">
-                </div>
-                <br>
-                <div class="input-group form-group-no-border">
-                      <input type="text" class="form-control" placeholder="Precio">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal-footer centrar">
-        <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
+        <button (click)="ver(agadicc)" class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
     </div>
   </ng-template>
 
@@ -137,10 +115,6 @@
                 <div class="input-group form-group-no-border">
                       <input type="text" class="form-control" placeholder="Nombre">
                 </div>
-                <br>
-                <div class="input-group form-group-no-border">
-                      <input type="text" class="form-control" placeholder="Precio">
-                </div>
             </div>
         </div>
         <div class="row centrar">
@@ -157,68 +131,6 @@
         </div>
     </div>
   </ng-template>
-
-  <ng-template #agrg>
-    <div class="modal-header mhead" style="background-color: #009CDE;">
-        <p class="heading lead">Agregados</p>
-    </div>
-    <div class="modal-body">
-        <div class="row">
-            <div class="col">
-                <table class="container">
-                    <thead>
-                        <tr>
-                            <th ><h1>Producto</h1></th>
-                            <th ><h1>Nombre</h1></th>
-                            <th ><h1>Precio</h1></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>9518</td>
-                            <td>9518</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>9518</td>
-                            <td>9518</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>9518</td>
-                            <td>9518</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>9518</td>
-                            <td>9518</td>
-                        </tr>
-                    </tbody>
-                    </table>
-                    <br>
-            </div>
-        </div>
-    </div>
-    <div class="modal-footer centrar">
-        <div class="row">
-                <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
-        </div>
-    </div>
-  </ng-template>
-
 
   <ng-template #valn>
     <div class="modal-header mhead" style="background-color: #009CDE;">
@@ -267,23 +179,35 @@
                 <div class="input-group form-group-no-border">
                       <input type="text" class="form-control" placeholder="Nombre">
                 </div>
-                <br>
-                <div class="input-group form-group-no-border">
-                      <input type="text" class="form-control" placeholder="Precio">
-                </div>
             </div>
         </div>
-        <div class="row centrar">
-            <p>Valor nutricional</p>
-        </div>
-        <input type="number" class="form-control inputtx" placeholder="Grasa">
-        <input type="number" class="form-control inputtx" placeholder="Azucar">
-        <input type="number" class="form-control inputtx" placeholder="Sal">
-        <input type="number" class="form-control inputtx" placeholder="Proteina">
     </div>
     <div class="modal-footer centrar">
         <div class="row">
                 <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
         </div>
+    </div>
+  </ng-template>
+
+  <ng-template #agadicc>
+    <div class="modal-header mhead" style="background-color: #009CDE;">
+        <p class="heading lead">Agregar adicion</p>
+    </div>
+    <div class="modal-body">
+        <br>
+        <br>
+        <div class="row centrar" >
+            <select class="sel" id="mounth" style="background-color: #009CDE; color: rgb(255, 255, 255);">
+                <option value="hide">Adiciones</option>
+                <option value="january">Arandano</option>
+                <option value="february">Mora</option>
+                <option value="march">Cafe</option>
+            </select> 
+        </div>
+        <br>
+        <br>
+    </div>
+    <div class="modal-footer centrar">
+        <button class="btn btn-danger btn-block" style="background-color: #00824a; border-color: #00824a;">Agregar</button>
     </div>
   </ng-template>

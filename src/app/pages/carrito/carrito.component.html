@@ -1,0 +1,55 @@
+<div class="wrapper">
+<div class="page-header" style="background-image: url('./assets/img/login-image.jpg');">
+    <div class="container">
+      <div class="card">
+        <div class="main" style="background: transparent;">
+            <h1 style="color: #00843D;">Carrito de Compras</h1>
+            <h2 class="sub-heading" style="color: #00843D;">Estos son los productos que elegiste</h2>
+        
+            <section class="shopping-cart">
+            <ol class="ui-list shopping-cart--list" id="shopping-cart--list">
+
+                <section class="cart">
+                    <ul>
+                      <li class="item">
+                        <img src="./assets/img/p1.jpg" style="width: 250px; height: 100px;"> 
+                        <h3 class="name" style="color: #00843D;">Muffins</h3>
+                        <p class="desc">Muffin Unidad, Adición Mora</p>
+                        <button class="_btn _column product-subtract">-</button> <p class="quantity">1</p> <button class="_btn _column product-plus">+</button>
+                        <p class="price">$5.000</p>
+                      </li>
+                      <li class="item">
+                        <img src="./assets/img/Todos 3.jpg" style="width: 250px; height: 100px;">
+                        <h3 class="name" style="color: #00843D;">Desayuno </h3>
+                        <p class="desc">Desayuno, Combo A</p>
+                        <button class="_btn _column product-subtract">-</button> <p class="quantity">1</p> <button class="_btn _column product-plus">+</button>
+                        <p class="price">$5.000</p>
+                      </li>
+                    </ul>
+                  </section>
+            </ol>
+        
+            <footer class="_grid cart-totals">
+                <div class="_column subtotal" id="subtotalCtr">
+                <div class="cart-totals-key">Subtotal</div>
+                <div class="cart-totals-value" style="color: #00843D">$10.000</div>
+                </div>
+                <div class="_column shipping" id="shippingCtr">
+                <div class="cart-totals-key">Envio</div>
+                <div class="cart-totals-value" style="color: #00843D">$0.00</div>
+                </div>
+                <div class="_column total" id="totalCtr">
+                <div class="cart-totals-key">Total</div>
+                <div class="cart-totals-value" style="color: #00843D">$10.000</div>
+                </div>
+                <div class="_column checkout">
+                  <app-probandopago></app-probandopago>
+                </div>
+            </footer>
+        
+            </section>
+        </div>
+      </div>
+    </div>
+</div> 
+

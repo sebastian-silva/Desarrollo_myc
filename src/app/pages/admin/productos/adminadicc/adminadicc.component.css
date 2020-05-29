@@ -150,3 +150,23 @@
 ::placeholder {
   color: rgb(65, 65, 65);
 }
+.sel{
+  background-color: #009CDE;
+  color: white;
+  text-align: center;
+}
+.sel:hover{
+  background-color: wheat;
+}
+
+.subir{
+  padding: 5px 10px;
+  background: #009CDE;
+  color:#fff;
+  border:0px solid #fff;
+}
+
+.subir:hover{
+  color:#fff;
+  background: rgb(8, 92, 128);
+}
