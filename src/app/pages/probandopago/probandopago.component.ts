@@ -17,33 +17,33 @@ export class ProbandopagoComponent implements OnInit {
   ngOnInit(): void {
       this.initConfig();
   }
-
   initConfig() {
     this.payPalConfig = {
-    currency: 'COP',
-    clientId: 'Afj0FnMDx2Q52Oo0v4mx04LI9XOM8SVemkyMsUrOXg-GYJkErTXydqWEcrkGB2rrpuV531T-RcCoVjVH',
+    currency: 'MXN',
+    clientId: 'ASiNzQ1WmiOYpTOdrmyBskYW6_lOid09x-oPEN0ryIqQnx3KRZ4P8Xx3A8QNwUrUQaSv9J4mkjw4NmXM',
+    
     createOrderOnClient: (data) => <ICreateOrderRequest>{
     intent: 'CAPTURE',
     purchase_units: [
     {
     amount: {
-    currency_code: 'COP',
-    value: '2',
+    currency_code: 'MXN',
+    value: '0.02',
     breakdown: {
     item_total: {
-    currency_code: 'COP',
-    value: '2'
+    currency_code: 'MXN',
+    value: '0.02'
     }
     }
     },
     items: [
     {
-    name: 'Miel y canela',
+    name: 'Tokens',
     quantity: '2',
     category: 'DIGITAL_GOODS',
     unit_amount: {
-    currency_code: 'COP',
-    value: '1.1',
+    currency_code: 'MXN',
+    value: '0.01',
     },
     }
     ]
@@ -76,5 +76,5 @@ export class ProbandopagoComponent implements OnInit {
     console.log('onClick', data, actions);
     },
     };
-    }
+  }
 }
