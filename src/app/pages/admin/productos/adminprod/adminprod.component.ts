@@ -26,7 +26,7 @@ export class AdminprodComponent implements OnInit {
   azucar: Number;
   sal : Number;
   proteina: Number;
-  productoEdit: Producto;
+  productoEdit: Producto=new Producto();;
 
   constructor(private modalService: NgbModal, private formularioCambio:FormBuilder, private formulario:FormBuilder, public productoSer:ProductoService,private httpClient: HttpClient ) {}
   ngOnInit(): void {

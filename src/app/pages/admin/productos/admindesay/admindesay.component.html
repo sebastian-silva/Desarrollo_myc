@@ -78,29 +78,14 @@
                             <td>9518</td>
                             <td>9518</td>
                         </tr>
-                        <tr>
+
+                        <tr *ngFor="let producto of productosSelec">
                             <td>
                                 <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
+                                {{producto.nombre}}
                             </td>
-                            <td>9518</td>
-                            <td>9518</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>9518</td>
-                            <td>9518</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>9518</td>
-                            <td>9518</td>
+                            <td>{{producto.nombre}}</td>
+                            <td>{{producto.precio}}</td>
                         </tr>
                     </tbody>
                     </table>
@@ -208,30 +193,16 @@
                             <td>9518</td>
                             <td>9518</td>
                         </tr>
-                        <tr>
+                        <tr *ngFor="let otro of otrosProductosSelec">
                             <td>
                                 <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
+                                {{otro.nombre}}
                             </td>
-                            <td>9518</td>
-                            <td>9518</td>
+                            <td>{{otro.nombre}}</td>
+                            <td>{{otro.precio}}</td>
                         </tr>
-                        <tr>
-                            <td>
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>9518</td>
-                            <td>9518</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <img src="assets/img/Todos 3.jpg" class="imagenpeq" alt="Rounded Image" style="border-radius: 100%;">
-                                Google
-                            </td>
-                            <td>9518</td>
-                            <td>9518</td>
-                        </tr>
+
+
                     </tbody>
                     </table>
                     <br>
@@ -303,7 +274,7 @@
     </div>
     <div class="modal-footer centrar">
         <div class="row">
-                <button class="btn btn-danger btn-block"  [disabled]="((!formularioDesayuno.valid) || (!imagenCargada))"  style="background-color: #00824a; border-color: #00824a;">Agregar</button>
+                <button class="btn btn-danger btn-block" (click)="agregarProducto()"  [disabled]="((!formularioDesayuno.valid) || (!imagenCargada))"  style="background-color: #00824a; border-color: #00824a;">Agregar</button>
         </div>
     </div>
 </form>
@@ -318,9 +289,10 @@
         <br>
         <div class="row centrar" >
             <select class="sel" id="producto" [(ngModel)]="productoSeleccionado" style="background-color: #009CDE; color: rgb(255, 255, 255);">
-                <option value="hide">Productos</option>
-                <option *ngFor="let producto of todosProductos"  value="producto" [ngValue]="producto">{{producto.nombre}}</option>
+                <option   value="hide">Productos</option>
+                <option *ngFor="let producto of todosProductos"  value="producto.nombre" [ngValue]="producto">{{producto.nombre}}</option>
             </select> 
+            <p>{{mensajeAgregar}}</p>
         </div>
         <br>
         <br>
@@ -342,11 +314,13 @@
                 <option value="hide">Productos</option>
                 <option *ngFor="let otroP of todosOtrosProductos" [ngValue]="otroP" value="{{otroP.nombre}}">{{otroP.nombre}}</option>
             </select> 
+            <p>{{mensajeAgregar}}</p>
         </div>
         <br>
         <br>
     </div>
     <div class="modal-footer centrar">
         <button class="btn btn-danger btn-block"(click)="verOtroP()"  style="background-color: #00824a; border-color: #00824a;">Agregar</button>
+        
     </div>
   </ng-template>
