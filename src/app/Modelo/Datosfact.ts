@@ -1,3 +1,4 @@
+
 export class Datosfact{
     idAdicion: Number;
     nombre:String;
@@ -7,7 +8,6 @@ export class Datosfact{
     azucar:String;
     sal:String;
     proteina:String;
-    modeloImagen: ModeloImagen;
 
     constructor(){
         this.idAdicion=this.idAdicion,
