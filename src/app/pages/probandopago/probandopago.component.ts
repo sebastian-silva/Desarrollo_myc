@@ -54,7 +54,7 @@ export class ProbandopagoComponent implements OnInit {
     this.buyerEmail = 'test@test.com';
     this.test = 1;
     this.description = 'Pan';
-    this.referenceCode = 'fact0020';
+    this.referenceCode = 'fact0022';
     this.amount = 20000;
     this.tax = 16806;
     this.taxReturnBase = 3193;
@@ -73,8 +73,8 @@ export class ProbandopagoComponent implements OnInit {
     if(this.transc === ''){
       
     }else{
-      // this.pagoServ.epayco.Pago = this.transc;
-      // this.ruta.navigateByUrl("respuestapag");
+       this.pagoServ.epayco.Pago = this.transc;
+       this.ruta.navigateByUrl("respuestapag");
     }
   }
 }

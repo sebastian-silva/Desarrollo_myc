@@ -22,7 +22,7 @@ export class AdminpersonComponent implements OnInit {
   adicionesSelec: Array<Adicion>;
   constructor(private modalService: NgbModal,public productoSer: ProductoService, public adicionSer: AdicionService, public proAdiSer: ProdadicciService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
     this.productoSer.ObtenerProductos().subscribe((productos)=>{
       this.todosProductos=productos;
     })
