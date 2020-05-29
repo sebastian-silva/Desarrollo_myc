@@ -56,7 +56,7 @@ export class ProbandopagoComponent implements OnInit {
 
     const md5 = new Md5();
     this.mira = '4Vj8eK4rloUd272L48hsrarnUA~'+this.merchantId+'~'+this.referenceCode+'~'+this.amount+'~'+this.currency;
-    this.signature = md5.appendStr(this.mira).end();
+    // this.signature = md5.appendStr(this.mira).end();
     console.log(this.route.root)
     
     this.responseUrl = 'http://localhost:4200/#/carrito';
