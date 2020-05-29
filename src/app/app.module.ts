@@ -33,7 +33,6 @@ import { AdmindesayComponent } from './pages/admin/productos/admindesay/admindes
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { AdminpersonComponent } from './pages/admin/productos/adminperson/adminperson.component';
 import { ProbandopagoComponent } from './pages/probandopago/probandopago.component';
-import { NgxPayPalModule } from 'ngx-paypal';
 import { RespuestapagComponent } from './pages/respuestapag/respuestapag.component';
 
 @NgModule({
@@ -76,8 +75,7 @@ import { RespuestapagComponent } from './pages/respuestapag/respuestapag.compone
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    NgxPayPalModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

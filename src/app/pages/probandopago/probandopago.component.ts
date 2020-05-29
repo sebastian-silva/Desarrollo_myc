@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Md5 } from 'ts-md5/dist/md5';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { PagoService } from '../../servicios/pago.service';
 
 @Component({
   selector: 'app-probandopago',
@@ -23,13 +24,22 @@ export class ProbandopagoComponent implements OnInit {
   responseUrl: String;
   confirmationUrl: String;
   mira: String;
+  transc: String;
 
-  constructor(private route: ActivatedRoute){
+  constructor(private route: ActivatedRoute,private ruta: Router,public pagoServ: PagoService){
     this.route.queryParams.subscribe(params => {
-      console.log(params.merchant_name);
-      console.log(params.merchantId);
-  });
- 
+        console.log(params.merchant_name);
+        console.log(params.merchantId);
+        console.log(params.transactionState);
+        this.transc = '';
+        if (params.transactionState==4) {
+          this.transc = 'Aprobada';
+        }else if(params.transactionState==6){
+          this.transc = 'Rechazada';
+        }else if(params.transactionState==7){
+          this.transc = 'En espera';
+        }
+    });
   }
 
   ngOnInit(): void {
@@ -39,7 +49,7 @@ export class ProbandopagoComponent implements OnInit {
     this.buyerEmail = 'test@test.com';
     this.test = 1;
     this.description = 'Pan';
-    this.referenceCode = 'fact005';
+    this.referenceCode = 'fact0015';
     this.amount = 20000;
     this.tax = 16806;
     this.taxReturnBase = 3193;
@@ -52,5 +62,12 @@ export class ProbandopagoComponent implements OnInit {
     this.responseUrl = 'http://localhost:4200/#/carrito';
     this.confirmationUrl = 'http://localhost:4200/#/respuestapag';
     console.log(this.responseUrl);
+    if(this.transc === ''){
+      
+    }else{
+      this.pagoServ.epayco.Pago = this.transc;
+      this.ruta.navigateByUrl("respuestapag");
+
+    }
   }
 }

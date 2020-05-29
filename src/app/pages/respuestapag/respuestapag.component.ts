@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { PagoService } from '../../servicios/pago.service';
 
 @Component({
   selector: 'app-respuestapag',
@@ -9,15 +10,12 @@ import { ActivatedRoute } from '@angular/router';
 export class RespuestapagComponent implements OnInit {
 
   estado: Number;
-  constructor(private route: ActivatedRoute) { 
-    this.route.queryParams.subscribe(params => {
-      console.log(params.state_pol);
-      this.estado = params.state_pol;
-  });
+  constructor(private route: ActivatedRoute,public pagoServ: PagoService) { 
+                           
   }
 
   ngOnInit(): void {
-
+    this.estado = this.pagoServ.epayco.Pago;
   }
 
 }
