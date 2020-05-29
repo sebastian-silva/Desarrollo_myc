@@ -1,5 +1,5 @@
 export class Epayco{
-    Pago: any;
+    Pago: string;
 
     constructor(){
         this.Pago=this.Pago;

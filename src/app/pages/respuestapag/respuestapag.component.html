@@ -1,1 +1,28 @@
 <p> {{ estado }} </p>
+<div class="page-header section-dark" style="background-image: url('assets/img/login-image.jpg')">
+    <div class="filter"></div>
+    <div class="content-center">
+        <div class="container">
+            <div class="card " style="max-width: 18rem;">
+                <div class="card-header centrar" *ngIf="aprob()">Gracias por tu compra</div>
+                <div class="card-header centrar" *ngIf="rechaz()">Tu pago ha sido rechazado</div>
+                <div class="card-header centrar" *ngIf="Espera()">Pago en espera</div>
+                <div class="card-body centrar">
+                    <div *ngIf="Espera()">
+                        <p class="card-text centrar">Pago en espera, tu producto se entregara 24 horas habiles despues de la llegada del pago.</p>
+                    </div>
+                    <div  *ngIf="rechaz()">
+                            <h6>Pago rechazado</h6>
+                            <p class="card-text centrar">Pago rechazado, No te preocupes puedes volver a intentarlo, adelante! .</p>
+                    </div>
+                    <div *ngIf="aprob()" class="centrar">
+                        <p class="card-text">tu producto se entregara 24 horas habiles, disfrutalo mucho!!!</p>
+                    </div>
+                </div>
+                <div class="card-footer centrar">
+                    <a routerLink="/tienda" class="btn btn-primary">Sigue comprando!!</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

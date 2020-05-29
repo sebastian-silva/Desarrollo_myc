@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PagoService } from '../../servicios/pago.service';
+import { renderFlagCheckIfStmt } from '@angular/compiler/src/render3/view/template';
 
 @Component({
   selector: 'app-respuestapag',
@@ -9,7 +10,7 @@ import { PagoService } from '../../servicios/pago.service';
 })
 export class RespuestapagComponent implements OnInit {
 
-  estado: Number;
+  estado: string;
   constructor(private route: ActivatedRoute,public pagoServ: PagoService) { 
                            
   }
@@ -18,4 +19,21 @@ export class RespuestapagComponent implements OnInit {
     this.estado = this.pagoServ.epayco.Pago;
   }
 
+  aprob(){
+    if(this.estado==='Aprobada'){
+      return true;
+    }
+  }
+
+  rechaz(){
+    if(this.estado==='Rechazada'){
+      return true;
+    }
+  }
+
+  Espera(){
+    if(this.estado==='En espera'){
+      return true;
+    }
+  }
 }
