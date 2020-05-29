@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CarritoService } from '../../servicios/carrito.service';
+import { Desayuno } from '../../Modelo/Desayuno';
 
 @Component({
   selector: 'app-desayuno',
@@ -8,8 +10,13 @@ import { Router } from '@angular/router';
 })
 export class DesayunoComponent implements OnInit {
 
-  constructor(private ruta: Router) { }
+  constructor(private ruta: Router, public carservice: CarritoService) { }
 
   ngOnInit(): void {
+  }
+
+  desay:Desayuno;
+  agcar(desay:Desayuno){
+    this.carservice.agregardesay(desay);
   }
 }

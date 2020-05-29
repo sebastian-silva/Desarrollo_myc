@@ -6,6 +6,7 @@ import { AdicionService } from 'app/servicios/adicion.service';
 import { Producto } from 'app/Modelo/Producto';
 import { Adicion } from 'app/Modelo/Adicion';
 import { ProducAdici } from 'app/Modelo/ProducAdici';
+import { CarritoService } from '../../servicios/carrito.service';
 
 @Component({
   selector: 'app-producto',
@@ -17,7 +18,7 @@ export class ProductoComponent implements OnInit {
   todosAdicciones: Array<Adicion>;
   todosProAdiccion: Array<ProducAdici>;
   informacion:Array<String>;
-  constructor(private ruta: Router,public proAdiSer: ProdadicciService ,public productoSer: ProductoService,public adicionSer: AdicionService ) { }
+  constructor(private ruta: Router,public proAdiSer: ProdadicciService ,public productoSer: ProductoService,public adicionSer: AdicionService, public carservice: CarritoService ) { }
 
   ngOnInit(): void {
     this.productoSer.ObtenerProductos().subscribe((productos)=>{
@@ -47,5 +48,11 @@ export class ProductoComponent implements OnInit {
       }
     }
   }
- 
+
+  carradd(prod: ProducAdici){
+    this.carservice.agregarpro(prod);
+  }
+  
+
+
 }

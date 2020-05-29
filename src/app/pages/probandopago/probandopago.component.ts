@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PagoService } from '../../servicios/pago.service';
+import { Md5 } from 'ts-md5/dist/md5'
 
 @Component({
   selector: 'app-probandopago',
