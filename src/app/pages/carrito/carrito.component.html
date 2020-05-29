@@ -1,7 +1,7 @@
 <div class="wrapper">
 <div class="page-header" style="background-image: url('./assets/img/bg2.jpg');">
     <div class="container">
-      <div class="card mb-3">
+      <div class="form mb-3">
         <div class="main" style="background: transparent;">
             <h1 style="color: #00843D;">Carrito de Compras</h1>
             <h2 class="sub-heading" style="color: #00843D;">Estos son los productos que elegiste</h2>
@@ -77,17 +77,56 @@
                 <div class="cart-totals-key">Envio</div>
                 <div class="cart-totals-value" style="color: #00843D">$0.00</div>
                 </div>
+                <div class="_column total" id="taxesCtr">
+                <div class="cart-totals-key">Impuestos</div>
+                <div class="cart-totals-value" style="color: #00843D">$1.600</div>
+                </div>
                 <div class="_column total" id="totalCtr">
-                <div class="cart-totals-key">Total</div>
-                <div class="cart-totals-value" style="color: #00843D">$10.000</div>
+                  <div class="cart-totals-key" style="font-weight: bolder;">Total</div>
+                  <div class="cart-totals-value" style="color: #00843D">$11.600</div>
                 </div>
                 <div class="_column checkout">
                   <app-probandopago></app-probandopago>
                 </div>
+                
+                
             </footer>
-        
+            <div class="_column total" id="Direccion">
+              <div class="cart-totals-key" style="font-size: medium;">Dirección de Envio</div>
+              <select class="select-css">
+                <option value="Bogota">Bogotá</option>
+                <option value="Chía">Chía</option>
+                <option value="Cajica">Cajicá</option>
+                <option value="Zipaquira">Zipaquirá</option>
+              </select>
+            <input type="text" name="name" class="form-control" formControlName="dir" style="width: 200px; margin-top: 5px; font-family: sans-serif;" placeholder="Ingrese su Direccion">
+            </div>
+              
+            
+
+            <!-- <form ngNoForm method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
+              <input name="merchantId"    type="hidden"  value="508029"   >
+              <input name="accountId"     type="hidden"  value="512321" >
+              <input name="description"   type="hidden"  value="Pago Miel y Canela"  >
+              <input name="referenceCode" type="hidden"  value="Pago002" >
+              <input name="amount"        type="hidden"  value="10000"   >
+              <input name="tax"           type="hidden"  value="0"  >
+              <input name="taxReturnBase" type="hidden"  value="0" >
+              <input name="currency"      type="hidden"  value="COP" >
+              <input name="signature"     type="hidden"  value="f7596d5d29e5f0acf0ebf81c5614208c"  >
+              <input name="test"          type="hidden"  value="1" >
+              <input name="buyerEmail"    type="hidden"  value="Cliente@mielycanela.com" >
+              <input name="responseUrl"    type="hidden"  value="http://localhost:4200/#/carrito" >
+              <input name="confirmationUrl"    type="hidden"  value="http://localhost:4200/#/carrito" >
+              <input name="Submit"  type="submit"  value="Pagar" >
+            </form> -->
+
             </section>
         </div>
       </div>
     </div>
+
+    
+
 </div> 
+</div>
