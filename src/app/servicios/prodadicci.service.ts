@@ -14,4 +14,9 @@ export class ProdadicciService {
   ObtenerProductoAdi(producAdi:ProducAdici[]):Observable<ProducAdici[]>{
     return this.http.post<ProducAdici[]>(this.ruta+'/producAdicion',producAdi)
   }
+
+  ObtenerTodosProducAdi():Observable<ProducAdici[]>{
+    return this.http.get<ProducAdici[]>(this.ruta+'/producAdicion')
+  }
+
 }
